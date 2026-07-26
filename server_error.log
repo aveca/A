@@ -1,275 +1,876 @@
+2026-07-26 02:27:35,769 [INFO] Chargement du modèle YOLOv8m...
+2026-07-26 02:27:35,935 [INFO] YOLO sur GPU: NVIDIA GeForce RTX 4060 Ti
+2026-07-26 02:27:35,935 [INFO] Chargement du VLM...
+2026-07-26 02:27:38,549 [DEBUG] connect_tcp.started host='huggingface.co' port=443 local_address=None timeout=None socket_options=None
+2026-07-26 02:27:38,603 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001BC2D1D9550>
+2026-07-26 02:27:38,604 [DEBUG] start_tls.started ssl_context=<ssl.SSLContext object at 0x000001BC2CF339B0> server_hostname='huggingface.co' timeout=None
+2026-07-26 02:27:38,651 [DEBUG] start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001BC2D155F90>
+2026-07-26 02:27:38,652 [DEBUG] send_request_headers.started request=<Request [b'GET']>
+2026-07-26 02:27:38,652 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:38,652 [DEBUG] send_request_body.started request=<Request [b'GET']>
+2026-07-26 02:27:38,653 [DEBUG] send_request_body.complete
+2026-07-26 02:27:38,653 [DEBUG] receive_response_headers.started request=<Request [b'GET']>
+2026-07-26 02:27:38,727 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'64'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:35 GMT'), (b'ETag', b'W/"40-09f9IAqP13xarAhQxFS2W8rvRkM"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d7-3700da6e0617858829a6cb87;71a96993-e8a1-4378-81ac-1c6addf0b837'), (b'RateLimit', b'"api";r=499;t=225'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'additional_chat_templates does not exist on "main"'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'5aEEv470-3O0V9pz35-x2_KkRRUY11S3bUeWPeWDEIB2_sIH07R3rg==')])
+2026-07-26 02:27:38,728 [INFO] HTTP Request: GET https://huggingface.co/api/models/Salesforce/blip-image-captioning-base/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-07-26 02:27:38,729 [DEBUG] receive_response_body.started request=<Request [b'GET']>
+2026-07-26 02:27:38,729 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:38,729 [DEBUG] response_closed.started
+2026-07-26 02:27:38,730 [DEBUG] response_closed.complete
+2026-07-26 02:27:38,731 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:38,731 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:38,731 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:38,732 [DEBUG] send_request_body.complete
+2026-07-26 02:27:38,732 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:38,805 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:35 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d7-6bb742561067ae38705c9cce;84300c74-fac4-41a0-912f-d522bd26d749'), (b'RateLimit', b'"resolvers";r=2999;t=225'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'kWh6_UqR1_0GtbRdA5nIlgLvgC2OrBhJAETWQ1pGhfxiPw_O6xcOJw==')])
+2026-07-26 02:27:38,806 [INFO] HTTP Request: HEAD https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-07-26 02:27:38,806 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:38,806 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:38,807 [DEBUG] response_closed.started
+2026-07-26 02:27:38,807 [DEBUG] response_closed.complete
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-[transformers] `Florence2Processor` defines `image_processor_class = 'CLIPImageProcessor'`, which is deprecated. Register the correct mapping in `AutoImageProcessor` instead.
-Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights: 100%|##########| 473/473 [00:00<00:00, 55303.59it/s]
-WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2026-07-26 02:27:38,807 [WARNING] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-07-26 02:27:38,808 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:38,809 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:38,809 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:38,809 [DEBUG] send_request_body.complete
+2026-07-26 02:27:38,809 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:38,881 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:35 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d7-45167dcc5c328383613ad0ab;9e4ae087-1a78-4118-a6d4-898f60c6875e'), (b'RateLimit', b'"resolvers";r=2998;t=225'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'0FIwe191NdE4ibh99iC_KIs31Xs-OzYdG9r25edRC4AgUbZTSl809g==')])
+2026-07-26 02:27:38,882 [INFO] HTTP Request: HEAD https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/main/chat_template.json "HTTP/1.1 404 Not Found"
+2026-07-26 02:27:38,882 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:38,883 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:38,883 [DEBUG] response_closed.started
+2026-07-26 02:27:38,883 [DEBUG] response_closed.complete
+2026-07-26 02:27:38,884 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:38,885 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:38,885 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:38,885 [DEBUG] send_request_body.complete
+2026-07-26 02:27:38,885 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:38,960 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:35 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d7-2f1a9183297c315325cd8e86;68795a51-ed3a-49ae-bc8a-a6e527c55d11'), (b'RateLimit', b'"resolvers";r=2997;t=225'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'MtpFwnRmKeYjMRS-KCxJUJ2lIemDxE34pCrBkmGtChcfr7FpIVZNCw==')])
+2026-07-26 02:27:38,960 [INFO] HTTP Request: HEAD https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/main/chat_template.jinja "HTTP/1.1 404 Not Found"
+2026-07-26 02:27:38,961 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:38,961 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:38,961 [DEBUG] response_closed.started
+2026-07-26 02:27:38,961 [DEBUG] response_closed.complete
+2026-07-26 02:27:38,962 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:38,963 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:38,963 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:38,963 [DEBUG] send_request_body.complete
+2026-07-26 02:27:38,963 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,040 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:35 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d7-6acff57859d922680e591492;91cab853-afd2-4b6c-8e60-a73a43f24e3b'), (b'RateLimit', b'"resolvers";r=2996;t=225'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'8CnJX7hlZVekKebyvr3V3jJE7AhGy9byuMY0u7mQZVaxRCmk-aTl7A==')])
+2026-07-26 02:27:39,040 [INFO] HTTP Request: HEAD https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/main/audio_tokenizer_config.json "HTTP/1.1 404 Not Found"
+2026-07-26 02:27:39,040 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,041 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:39,041 [DEBUG] response_closed.started
+2026-07-26 02:27:39,041 [DEBUG] response_closed.complete
+2026-07-26 02:27:39,043 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,043 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:39,043 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,043 [DEBUG] send_request_body.complete
+2026-07-26 02:27:39,043 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,119 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:36 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d7-2388b5bf001ba2985075e819;9c3d2ad3-168d-469b-a766-d7911b59e65a'), (b'RateLimit', b'"resolvers";r=2995;t=225'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'Qta_fvXhvUmEdA8NEdrZE119ZVIVshLSTwp8lHiT_vL_VDu2F6twHQ==')])
+2026-07-26 02:27:39,120 [INFO] HTTP Request: HEAD https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-07-26 02:27:39,120 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,120 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:39,120 [DEBUG] response_closed.started
+2026-07-26 02:27:39,121 [DEBUG] response_closed.complete
+2026-07-26 02:27:39,122 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,122 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:39,122 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,122 [DEBUG] send_request_body.complete
+2026-07-26 02:27:39,123 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,196 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'304'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:36 GMT'), (b'Location', b'/api/resolve-cache/models/Salesforce/blip-image-captioning-base/82a37760796d32b1411fe092ab5d4e227313294b/preprocessor_config.json?%2FSalesforce%2Fblip-image-captioning-base%2Fresolve%2Fmain%2Fpreprocessor_config.json=&etag=%226573d0934c7c476133f6885e97be9f7e36d14bed%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d8-53820f776fb52fe07c922248;115a62b6-8cb4-468c-8db0-08cbcedf97d9'), (b'RateLimit', b'"resolvers";r=2994;t=224'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'HIT'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'preprocessor_config.json; filename="preprocessor_config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-ETag', b'"6573d0934c7c476133f6885e97be9f7e36d14bed"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'p2uHSz2F_Udi2oTGRa0u4ktHZUHbnCi4061AkcHzUOB3qA9CxjScBQ==')])
+2026-07-26 02:27:39,197 [INFO] HTTP Request: HEAD https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-26 02:27:39,197 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,197 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:39,197 [DEBUG] response_closed.started
+2026-07-26 02:27:39,197 [DEBUG] response_closed.complete
+2026-07-26 02:27:39,198 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,198 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:39,198 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,198 [DEBUG] send_request_body.complete
+2026-07-26 02:27:39,198 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,238 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'287'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 21 May 2026 01:33:30 GMT'), (b'ETag', b'"6573d0934c7c476133f6885e97be9f7e36d14bed"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'09384560-2cf8-4403-b653-4f85b480639b'), (b'RateLimit', b'"resolvers";r=2999;t=54'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'preprocessor_config.json; filename="preprocessor_config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'xWq6qe-NthZym79zXq6HM2AzPBGNpwKlHmqSDVT4d4jMmUlhwmRf0Q=='), (b'Age', b'5720046')])
+2026-07-26 02:27:39,238 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Salesforce/blip-image-captioning-base/82a37760796d32b1411fe092ab5d4e227313294b/preprocessor_config.json "HTTP/1.1 200 OK"
+2026-07-26 02:27:39,238 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,238 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:39,239 [DEBUG] response_closed.started
+2026-07-26 02:27:39,239 [DEBUG] response_closed.complete
+2026-07-26 02:27:39,241 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,242 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:39,242 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,242 [DEBUG] send_request_body.complete
+2026-07-26 02:27:39,242 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,314 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:36 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d8-75771eb46487e9531d2e94ae;bdceb4de-be95-4e49-8e98-b47cc7d3aee8'), (b'RateLimit', b'"resolvers";r=2993;t=224'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'1zDd0mE33HFr1Z_X6n0KNBHxEiWWIGS9JtstGSQtCUYwgha8fBci_g==')])
+2026-07-26 02:27:39,314 [INFO] HTTP Request: HEAD https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-07-26 02:27:39,314 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,315 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:39,315 [DEBUG] response_closed.started
+2026-07-26 02:27:39,315 [DEBUG] response_closed.complete
+2026-07-26 02:27:39,316 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,316 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:39,317 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,317 [DEBUG] send_request_body.complete
+2026-07-26 02:27:39,317 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,388 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'304'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:36 GMT'), (b'Location', b'/api/resolve-cache/models/Salesforce/blip-image-captioning-base/82a37760796d32b1411fe092ab5d4e227313294b/preprocessor_config.json?%2FSalesforce%2Fblip-image-captioning-base%2Fresolve%2Fmain%2Fpreprocessor_config.json=&etag=%226573d0934c7c476133f6885e97be9f7e36d14bed%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d8-0c416610329e523802b2b38c;41dcdbcc-678c-42e5-9b17-8da68eee11a2'), (b'RateLimit', b'"resolvers";r=2992;t=224'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'X-Hub-Cache', b'HIT'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'preprocessor_config.json; filename="preprocessor_config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-ETag', b'"6573d0934c7c476133f6885e97be9f7e36d14bed"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'3XMk-oGwb2881Ga9Mf-vp3NP5rivRvW0rQK8WZGeghCNztw3e-GJDw==')])
+2026-07-26 02:27:39,389 [INFO] HTTP Request: HEAD https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-26 02:27:39,389 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,389 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:39,389 [DEBUG] response_closed.started
+2026-07-26 02:27:39,390 [DEBUG] response_closed.complete
+2026-07-26 02:27:39,390 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,390 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:39,390 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,391 [DEBUG] send_request_body.complete
+2026-07-26 02:27:39,391 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,430 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'287'), (b'Connection', b'keep-alive'), (b'Date', b'Thu, 21 May 2026 01:33:30 GMT'), (b'ETag', b'"6573d0934c7c476133f6885e97be9f7e36d14bed"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'09384560-2cf8-4403-b653-4f85b480639b'), (b'RateLimit', b'"resolvers";r=2999;t=54'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'preprocessor_config.json; filename="preprocessor_config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'Dkzbi7ONx_2mUW6Tje4Z-tqdtnqFsgIHhGxBALrU0dwWFhrbqXP9_A=='), (b'Age', b'5720046')])
+2026-07-26 02:27:39,431 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Salesforce/blip-image-captioning-base/82a37760796d32b1411fe092ab5d4e227313294b/preprocessor_config.json "HTTP/1.1 200 OK"
+2026-07-26 02:27:39,431 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,431 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:39,432 [DEBUG] response_closed.started
+2026-07-26 02:27:39,432 [DEBUG] response_closed.complete
+2026-07-26 02:27:39,434 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,434 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:39,434 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,434 [DEBUG] send_request_body.complete
+2026-07-26 02:27:39,434 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,512 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'278'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:36 GMT'), (b'Location', b'/api/resolve-cache/models/Salesforce/blip-image-captioning-base/82a37760796d32b1411fe092ab5d4e227313294b/config.json?%2FSalesforce%2Fblip-image-captioning-base%2Fresolve%2Fmain%2Fconfig.json=&etag=%22097cf86f841795297c18434d5753a83bd0eecdb1%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d8-172b374d449fa6ad15dc05a9;24e85a80-7848-492d-ac16-61111eb5a119'), (b'RateLimit', b'"resolvers";r=2991;t=224'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'HIT'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.json; filename="config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-ETag', b'"097cf86f841795297c18434d5753a83bd0eecdb1"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'WEXKN24apZwUDgX1ec5YhD8ubQKKdFZ9Qg07j-zCWkPOtC_ywqasQA==')])
+2026-07-26 02:27:39,512 [INFO] HTTP Request: HEAD https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-26 02:27:39,513 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,514 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:39,514 [DEBUG] response_closed.started
+2026-07-26 02:27:39,514 [DEBUG] response_closed.complete
+2026-07-26 02:27:39,514 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,515 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:39,515 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,515 [DEBUG] send_request_body.complete
+2026-07-26 02:27:39,515 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,556 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'4563'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 17:17:24 GMT'), (b'ETag', b'"097cf86f841795297c18434d5753a83bd0eecdb1"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a381ca4-32de9dbd008077b858d1a7df'), (b'RateLimit', b'"resolvers";r=2983;t=62'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.json; filename="config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'N7y8DxKanDU7M2fyDnmQ44JsgCbuRIqO9qhOwiHx-kLsnJOu79cOpA=='), (b'Age', b'2985012')])
+2026-07-26 02:27:39,556 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Salesforce/blip-image-captioning-base/82a37760796d32b1411fe092ab5d4e227313294b/config.json "HTTP/1.1 200 OK"
+2026-07-26 02:27:39,557 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,557 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:39,557 [DEBUG] response_closed.started
+2026-07-26 02:27:39,557 [DEBUG] response_closed.complete
+2026-07-26 02:27:39,565 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,565 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:39,566 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,566 [DEBUG] send_request_body.complete
+2026-07-26 02:27:39,566 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,635 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'298'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:36 GMT'), (b'Location', b'/api/resolve-cache/models/Salesforce/blip-image-captioning-base/82a37760796d32b1411fe092ab5d4e227313294b/tokenizer_config.json?%2FSalesforce%2Fblip-image-captioning-base%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%22c73526e58988f76f1e1f28995c79a41a09e4b1ab%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d8-0d1e3eff60188fa21492554c;6e9632f6-717b-496a-9974-aee191b4715f'), (b'RateLimit', b'"resolvers";r=2990;t=224'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'X-Hub-Cache', b'HIT'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'tokenizer_config.json; filename="tokenizer_config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-ETag', b'"c73526e58988f76f1e1f28995c79a41a09e4b1ab"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'YUIyM6dfSdxjyocvIjBpDe3wwWhxXSS88FCBL92MNlQCXe8P9rva-w==')])
+2026-07-26 02:27:39,635 [INFO] HTTP Request: HEAD https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-26 02:27:39,636 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,636 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:39,636 [DEBUG] response_closed.started
+2026-07-26 02:27:39,636 [DEBUG] response_closed.complete
+2026-07-26 02:27:39,637 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,637 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:39,637 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,637 [DEBUG] send_request_body.complete
+2026-07-26 02:27:39,638 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,680 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'506'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 17 May 2026 17:14:51 GMT'), (b'ETag', b'"c73526e58988f76f1e1f28995c79a41a09e4b1ab"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a09f78b-65b7c5f0768ce13825b1e739;4895fdcb-b712-4fd4-86ba-fba61ba42819'), (b'RateLimit', b'"resolvers";r=2997;t=209'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'tokenizer_config.json; filename="tokenizer_config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'hNNzYxzI0n8D5DRq_gGxkKchZd2zgsZCDUWaEIBkeKmy6UOB1oMP9A=='), (b'Age', b'6009165')])
+2026-07-26 02:27:39,681 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Salesforce/blip-image-captioning-base/82a37760796d32b1411fe092ab5d4e227313294b/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-07-26 02:27:39,681 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,681 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:39,681 [DEBUG] response_closed.started
+2026-07-26 02:27:39,681 [DEBUG] response_closed.complete
+2026-07-26 02:27:39,686 [DEBUG] send_request_headers.started request=<Request [b'GET']>
+2026-07-26 02:27:39,687 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:39,687 [DEBUG] send_request_body.started request=<Request [b'GET']>
+2026-07-26 02:27:39,687 [DEBUG] send_request_body.complete
+2026-07-26 02:27:39,687 [DEBUG] receive_response_headers.started request=<Request [b'GET']>
+2026-07-26 02:27:39,760 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Content-Length', b'64'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:36 GMT'), (b'ETag', b'W/"40-09f9IAqP13xarAhQxFS2W8rvRkM"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d8-4fc3904975ecaad9106c6e82;f21b59b2-fc7f-4edb-87ea-a56d5616deef'), (b'RateLimit', b'"api";r=498;t=224'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'additional_chat_templates does not exist on "main"'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'Y1ma6pTAhreOOqUej3czid1an2LalJ_oj4MljLgq7yJSGFze1U6-fQ==')])
+2026-07-26 02:27:39,761 [INFO] HTTP Request: GET https://huggingface.co/api/models/Salesforce/blip-image-captioning-base/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-07-26 02:27:39,761 [DEBUG] receive_response_body.started request=<Request [b'GET']>
+2026-07-26 02:27:39,761 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:39,761 [DEBUG] response_closed.started
+2026-07-26 02:27:39,762 [DEBUG] response_closed.complete
+2026-07-26 02:27:39,763 [DEBUG] send_request_headers.started request=<Request [b'GET']>
+2026-07-26 02:27:39,763 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:39,763 [DEBUG] send_request_body.started request=<Request [b'GET']>
+2026-07-26 02:27:39,763 [DEBUG] send_request_body.complete
+2026-07-26 02:27:39,763 [DEBUG] receive_response_headers.started request=<Request [b'GET']>
+2026-07-26 02:27:39,839 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:36 GMT'), (b'content-encoding', b'gzip'), (b'ETag', b'W/"58d-pCQtjb9JgoivM8qj6vVzJKRjVbs"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d8-16c4972c4740b468778e774a;aa2ac841-2bf9-44ba-bf7d-3ca9719dc9af'), (b'RateLimit', b'"api";r=497;t=224'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'vary', b'Accept-Encoding'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'16PrBlls_5tp41iZWlmDb6CJ3usNt2CLElGuVJL6FU30h2LHI50tjQ==')])
+2026-07-26 02:27:39,839 [INFO] HTTP Request: GET https://huggingface.co/api/models/Salesforce/blip-image-captioning-base/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-07-26 02:27:39,840 [DEBUG] receive_response_body.started request=<Request [b'GET']>
+2026-07-26 02:27:39,840 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:39,840 [DEBUG] response_closed.started
+2026-07-26 02:27:39,841 [DEBUG] response_closed.complete
+2026-07-26 02:27:39,875 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,875 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:39,876 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,876 [DEBUG] send_request_body.complete
+2026-07-26 02:27:39,876 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,949 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'278'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:36 GMT'), (b'Location', b'/api/resolve-cache/models/Salesforce/blip-image-captioning-base/82a37760796d32b1411fe092ab5d4e227313294b/config.json?%2FSalesforce%2Fblip-image-captioning-base%2Fresolve%2Fmain%2Fconfig.json=&etag=%22097cf86f841795297c18434d5753a83bd0eecdb1%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d8-3ebcd32d1c09a3f8144191cc;03dda1d2-b12d-45a4-92c1-4dbc9692b875'), (b'RateLimit', b'"resolvers";r=2989;t=224'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'HIT'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.json; filename="config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-ETag', b'"097cf86f841795297c18434d5753a83bd0eecdb1"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'b8lZDk6v8hOw3-4pMa6v6GniQdQDjP-MMumUZdgrm2vZKPksgM5dVw==')])
+2026-07-26 02:27:39,949 [INFO] HTTP Request: HEAD https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-26 02:27:39,950 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,950 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:39,950 [DEBUG] response_closed.started
+2026-07-26 02:27:39,951 [DEBUG] response_closed.complete
+2026-07-26 02:27:39,951 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,951 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:39,952 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,952 [DEBUG] send_request_body.complete
+2026-07-26 02:27:39,952 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,994 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'4563'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 17:17:24 GMT'), (b'ETag', b'"097cf86f841795297c18434d5753a83bd0eecdb1"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a381ca4-32de9dbd008077b858d1a7df'), (b'RateLimit', b'"resolvers";r=2983;t=62'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.json; filename="config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'Lqu-R3k9GxSlsMs-7g97aXWyi3T2tRncAUpQfcSxZ5uCRAq05F1jmA=='), (b'Age', b'2985012')])
+2026-07-26 02:27:39,994 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Salesforce/blip-image-captioning-base/82a37760796d32b1411fe092ab5d4e227313294b/config.json "HTTP/1.1 200 OK"
+2026-07-26 02:27:39,994 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:39,994 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:39,995 [DEBUG] response_closed.started
+2026-07-26 02:27:39,995 [DEBUG] response_closed.complete
+2026-07-26 02:27:40,003 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,003 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:40,003 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,003 [DEBUG] send_request_body.complete
+2026-07-26 02:27:40,004 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,075 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:36 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d8-3d740fb774b1e52a5d71237e;90cdd3de-e31a-48ea-8956-e85511aa2d21'), (b'RateLimit', b'"resolvers";r=2988;t=224'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'ytufnv5vWWLG0OtvqWfsng13pUIOn05VyYOBnJDTUZvUs_Rqnl2f0g==')])
+2026-07-26 02:27:40,076 [INFO] HTTP Request: HEAD https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-07-26 02:27:40,076 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,076 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:40,076 [DEBUG] response_closed.started
+2026-07-26 02:27:40,077 [DEBUG] response_closed.complete
+2026-07-26 02:27:40,078 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,078 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:40,079 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,079 [DEBUG] send_request_body.complete
+2026-07-26 02:27:40,079 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,151 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:37 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d9-0efd20721be924ef15469580;64cdae53-7a93-47fb-a1a5-2d4c095e040b'), (b'RateLimit', b'"resolvers";r=2987;t=223'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'RRVCuIX6vUM30hON1AGU6Z7YjSuoxGvaFpCecBi_JcoHjZAZ-I35KA==')])
+2026-07-26 02:27:40,151 [INFO] HTTP Request: HEAD https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-07-26 02:27:40,152 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,152 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:40,152 [DEBUG] response_closed.started
+2026-07-26 02:27:40,152 [DEBUG] response_closed.complete
+2026-07-26 02:27:40,154 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,154 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:40,154 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,155 [DEBUG] send_request_body.complete
+2026-07-26 02:27:40,155 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,231 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 302, b'Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'1095'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:37 GMT'), (b'Location', b'https://us.aws.cdn.hf.co/xet-bridge-us/63974666f74f697677e32689/fd40eaea33f3a6960fda94179358f29541afceb88a7f87b4915693f48c35bfa7?X-Xet-Cas-Uid=public&response-content-type=application%2Foctet-stream&user_id=public&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&Expires=1785050857&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy5hd3MuY2RuLmhmLmNvL3hldC1icmlkZ2UtdXMvNjM5NzQ2NjZmNzRmNjk3Njc3ZTMyNjg5L2ZkNDBlYWVhMzNmM2E2OTYwZmRhOTQxNzkzNThmMjk1NDFhZmNlYjg4YTdmODdiNDkxNTY5M2Y0OGMzNWJmYTdcXD9YLVhldC1DYXMtVWlkPXB1YmxpYyZyZXNwb25zZS1jb250ZW50LXR5cGU9YXBwbGljYXRpb24lMkZvY3RldC1zdHJlYW0mdXNlcl9pZD1wdWJsaWMmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmUlM0IrZmlsZW5hbWUlMkElM0RVVEYtOCUyNyUyN3B5dG9yY2hfbW9kZWwuYmluJTNCK2ZpbGVuYW1lJTNEJTIycHl0b3JjaF9tb2RlbC5iaW4lMjIlM0IiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkVwb2NoVGltZSI6MTc4NTA1MDg1N319fV19&Signature=MEUCIHshps3POdfodsgrd9PExc81P029b-zuFB6Xu9wIN4kDAiEA1JRywZqD3SJJ2F6noou-%7Ehy7QzOdXc0Lr5lenprRguc_&Key-Pair-Id=01KXEF4KZ1B6FV465MAWR4M21F'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d9-3261c98a08bbdda65d1a776c;447782cd-df75-4655-a401-7787f25faae5'), (b'RateLimit', b'"resolvers";r=2986;t=223'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Linked-Size', b'989820849'), (b'X-Linked-ETag', b'"d6638651a5526cc2ede56f2b5104d6851b0755816d220e5e046870430180c767"'), (b'Cache-Control', b'no-store'), (b'X-Xet-Hash', b'fd40eaea33f3a6960fda94179358f29541afceb88a7f87b4915693f48c35bfa7'), (b'Link', b'<https://huggingface.co/api/models/Salesforce/blip-image-captioning-base/xet-read-token/82a37760796d32b1411fe092ab5d4e227313294b>; rel="xet-auth", <https://cas-server.xethub.hf.co/v1/reconstructions/fd40eaea33f3a6960fda94179358f29541afceb88a7f87b4915693f48c35bfa7>; rel="xet-reconstruction-info"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'HSp2cIfcjVBHHeAZWlada6ntAGKIrCowH-MC3CkfuDN73fH0dpnreg==')])
+2026-07-26 02:27:40,231 [INFO] HTTP Request: HEAD https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/main/pytorch_model.bin "HTTP/1.1 302 Found"
+2026-07-26 02:27:40,232 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,232 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:40,232 [DEBUG] response_closed.started
+2026-07-26 02:27:40,232 [DEBUG] response_closed.complete
+2026-07-26 02:27:40,234 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,234 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:40,234 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,234 [DEBUG] send_request_body.complete
+2026-07-26 02:27:40,234 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,307 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:37 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d9-67f1f2cb1b7d7cfa0abd9de9;bce5099d-d0bf-49eb-af62-36b305d96c1e'), (b'RateLimit', b'"resolvers";r=2985;t=223'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'mnKUvwIeR9Qb1FvqHqz9BMMJ3SSsyUfkbAWoIIzsiZVPJqkXlMPvWQ==')])
+2026-07-26 02:27:40,308 [INFO] HTTP Request: HEAD https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-07-26 02:27:40,308 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,308 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:40,308 [DEBUG] response_closed.started
+2026-07-26 02:27:40,309 [DEBUG] response_closed.complete
+2026-07-26 02:27:40,310 [DEBUG] send_request_headers.started request=<Request [b'GET']>
+2026-07-26 02:27:40,312 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:40,312 [DEBUG] send_request_body.started request=<Request [b'GET']>
+2026-07-26 02:27:40,313 [DEBUG] send_request_body.complete
+2026-07-26 02:27:40,313 [DEBUG] receive_response_headers.started request=<Request [b'GET']>
+2026-07-26 02:27:40,385 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:37 GMT'), (b'content-encoding', b'gzip'), (b'ETag', b'W/"1161-oHvvborEmzrFLrH2YGnfRgtveS8"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d9-09a1a4f7661be031225cbf20;cad864c0-d578-4dbf-83a7-fe77fd7b22e2'), (b'RateLimit', b'"api";r=496;t=223'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'vary', b'Accept-Encoding'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'DgBcwHQ4-EfLikqNlFMvO_687y3zicaYg47alVQcl9tGxg0jGqO-kQ==')])
+2026-07-26 02:27:40,386 [INFO] HTTP Request: GET https://huggingface.co/api/models/Salesforce/blip-image-captioning-base "HTTP/1.1 200 OK"
+2026-07-26 02:27:40,386 [DEBUG] receive_response_body.started request=<Request [b'GET']>
+2026-07-26 02:27:40,387 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:40,387 [DEBUG] response_closed.started
+2026-07-26 02:27:40,387 [DEBUG] response_closed.complete
+2026-07-26 02:27:40,391 [DEBUG] send_request_headers.started request=<Request [b'GET']>
+2026-07-26 02:27:40,391 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:40,391 [DEBUG] send_request_body.started request=<Request [b'GET']>
+2026-07-26 02:27:40,392 [DEBUG] send_request_body.complete
+2026-07-26 02:27:40,392 [DEBUG] receive_response_headers.started request=<Request [b'GET']>
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights: 100%|##########| 473/473 [00:00<00:00, 39953.80it/s]
+2026-07-26 02:27:40,477 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:37 GMT'), (b'content-encoding', b'gzip'), (b'ETag', b'W/"1cca-JC4tWxnGnwZBvh2rHDFi5+E+SAk"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d9-5791b2d8211323b56c295ff4;ca486e96-2e01-454f-af06-6bf9de68a345'), (b'RateLimit', b'"api";r=495;t=223'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'vary', b'Accept-Encoding'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Total-Count', b'24'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'slqkMbJupa42i18DBx_owJVvJYgd2LLSQPJ7KXC5jL177dhqagWHAg==')])
+2026-07-26 02:27:40,478 [INFO] HTTP Request: GET https://huggingface.co/api/models/Salesforce/blip-image-captioning-base/commits/main "HTTP/1.1 200 OK"
+2026-07-26 02:27:40,478 [DEBUG] receive_response_body.started request=<Request [b'GET']>
+2026-07-26 02:27:40,478 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:40,479 [DEBUG] response_closed.started
+2026-07-26 02:27:40,479 [DEBUG] response_closed.complete
+2026-07-26 02:27:40,480 [DEBUG] send_request_headers.started request=<Request [b'GET']>
+2026-07-26 02:27:40,480 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:40,480 [DEBUG] send_request_body.started request=<Request [b'GET']>
+2026-07-26 02:27:40,481 [DEBUG] send_request_body.complete
+2026-07-26 02:27:40,481 [DEBUG] receive_response_headers.started request=<Request [b'GET']>
+2026-07-26 02:27:40,515 [DEBUG] connect_tcp.started host='huggingface.co' port=443 local_address=None timeout=10 socket_options=None
+2026-07-26 02:27:40,570 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001BC09AC3B10>
+2026-07-26 02:27:40,570 [DEBUG] start_tls.started ssl_context=<ssl.SSLContext object at 0x000001BC2CF339B0> server_hostname='huggingface.co' timeout=10
+2026-07-26 02:27:40,583 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:37 GMT'), (b'content-encoding', b'gzip'), (b'ETag', b'W/"81b1-qf68nL2drqA28K89fvx6Bo4v77M"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d9-5479a2af24bdd328755b274a;6627364a-ea3c-412a-9ddd-50a0b05085a8'), (b'RateLimit', b'"api";r=494;t=223'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'vary', b'Accept-Encoding'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'07qlxS50CvNknYFqL0z94kES7lsc5RjGlBpSM74qmf5MhL0dxIrdPQ==')])
+2026-07-26 02:27:40,584 [INFO] HTTP Request: GET https://huggingface.co/api/models/Salesforce/blip-image-captioning-base/discussions?p=0 "HTTP/1.1 200 OK"
+2026-07-26 02:27:40,584 [DEBUG] receive_response_body.started request=<Request [b'GET']>
+2026-07-26 02:27:40,584 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:40,585 [DEBUG] response_closed.started
+2026-07-26 02:27:40,585 [DEBUG] response_closed.complete
+2026-07-26 02:27:40,586 [DEBUG] send_request_headers.started request=<Request [b'GET']>
+2026-07-26 02:27:40,586 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:40,586 [DEBUG] send_request_body.started request=<Request [b'GET']>
+2026-07-26 02:27:40,586 [DEBUG] send_request_body.complete
+2026-07-26 02:27:40,586 [DEBUG] receive_response_headers.started request=<Request [b'GET']>
+2026-07-26 02:27:40,614 [DEBUG] start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001BC09D4F6F0>
+2026-07-26 02:27:40,615 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,615 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:40,615 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,616 [DEBUG] send_request_body.complete
+2026-07-26 02:27:40,616 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,675 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:37 GMT'), (b'content-encoding', b'gzip'), (b'ETag', b'W/"208f-x1s577PkxwTTHtrJmH39omxSGsM"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d9-1c1cefc90f0f887a1ce570bb;2bb715e8-faee-4c85-9ff2-40bc837da5bc'), (b'RateLimit', b'"api";r=493;t=223'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'vary', b'Accept-Encoding'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Total-Count', b'25'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'xPZZryPerbBAlXMkeeO3dVcOeEFuXMkOSJ4AFoxCBNCbbcdjsKF4Zg==')])
+2026-07-26 02:27:40,676 [INFO] HTTP Request: GET https://huggingface.co/api/models/Salesforce/blip-image-captioning-base/commits/refs%2Fpr%2F52 "HTTP/1.1 200 OK"
+2026-07-26 02:27:40,676 [DEBUG] receive_response_body.started request=<Request [b'GET']>
+2026-07-26 02:27:40,676 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:40,676 [DEBUG] response_closed.started
+2026-07-26 02:27:40,676 [DEBUG] response_closed.complete
+2026-07-26 02:27:40,677 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,677 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:40,678 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,678 [DEBUG] send_request_body.complete
+2026-07-26 02:27:40,678 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,687 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:37 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d9-13d885514faf82504960a4e5;b590ffef-1c20-4c85-9120-0f3d5f17aa9e'), (b'RateLimit', b'"resolvers";r=2984;t=223'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 a7539c5125d12bfd9e4a6b2ed20030ee.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'LZ_GRQ19jyggyj3XYj4rS5gxbhVJFBsHnEZL0lD2pHv9VINAexNNgQ==')])
+2026-07-26 02:27:40,688 [INFO] HTTP Request: HEAD https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/main/generation_config.json "HTTP/1.1 404 Not Found"
+2026-07-26 02:27:40,688 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,688 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:40,688 [DEBUG] response_closed.started
+2026-07-26 02:27:40,689 [DEBUG] response_closed.complete
+2026-07-26 02:27:40,690 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,690 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:40,690 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,691 [DEBUG] send_request_body.complete
+2026-07-26 02:27:40,691 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,749 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'15'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:37 GMT'), (b'ETag', b'W/"f-mY2VvLxuxB7KhsoOdQTlMTccuAQ"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d9-4ab5b6384b41c0896db36206;f9f58375-3a3f-47e4-a743-29534b001248'), (b'RateLimit', b'"resolvers";r=2983;t=223'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'4c26dfece70e02028433dd192458a54b390b85d2'), (b'Accept-Ranges', b'bytes'), (b'X-Hub-Cache', b'MISS'), (b'X-Error-Code', b'EntryNotFound'), (b'X-Error-Message', b'Entry not found'), (b'X-Cache', b'Error from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'_wTRVsh8BsETkWQ2U3ralrHbQbcaCUHWDFXuSI2Kf0dfqQsZmsPoZg==')])
+2026-07-26 02:27:40,750 [INFO] HTTP Request: HEAD https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/refs%2Fpr%2F52/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-07-26 02:27:40,750 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,751 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:40,751 [DEBUG] response_closed.started
+2026-07-26 02:27:40,751 [DEBUG] response_closed.complete
+2026-07-26 02:27:40,752 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,752 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:40,752 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,752 [DEBUG] send_request_body.complete
+2026-07-26 02:27:40,753 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,764 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'278'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:37 GMT'), (b'Location', b'/api/resolve-cache/models/Salesforce/blip-image-captioning-base/82a37760796d32b1411fe092ab5d4e227313294b/config.json?%2FSalesforce%2Fblip-image-captioning-base%2Fresolve%2Fmain%2Fconfig.json=&etag=%22097cf86f841795297c18434d5753a83bd0eecdb1%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d9-38a11b4b2c820e26707046ec;de88a116-5953-436e-a779-1494d77394ad'), (b'RateLimit', b'"resolvers";r=2982;t=223'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'HIT'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.json; filename="config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-ETag', b'"097cf86f841795297c18434d5753a83bd0eecdb1"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 a7539c5125d12bfd9e4a6b2ed20030ee.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'5wDlLkWpk8nm1Isnc8hfxQ5e5pWRtR4n3GBMzAg1a3DICyE7IzFHgQ==')])
+2026-07-26 02:27:40,764 [INFO] HTTP Request: HEAD https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-07-26 02:27:40,765 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,765 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:40,765 [DEBUG] response_closed.started
+2026-07-26 02:27:40,765 [DEBUG] response_closed.complete
+2026-07-26 02:27:40,766 [DEBUG] send_request_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,766 [DEBUG] send_request_headers.complete
+2026-07-26 02:27:40,766 [DEBUG] send_request_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,766 [DEBUG] send_request_body.complete
+2026-07-26 02:27:40,766 [DEBUG] receive_response_headers.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,807 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'4563'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 21 Jun 2026 17:17:24 GMT'), (b'ETag', b'"097cf86f841795297c18434d5753a83bd0eecdb1"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a381ca4-32de9dbd008077b858d1a7df'), (b'RateLimit', b'"resolvers";r=2983;t=62'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'82a37760796d32b1411fe092ab5d4e227313294b'), (b'Accept-Ranges', b'bytes'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.json; filename="config.json";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 a7539c5125d12bfd9e4a6b2ed20030ee.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'pwvsHJ9GvUuK5NIgu-AFxohyGlAZaF-9Xw7p_94D8s1RsIeWlZ3NlQ=='), (b'Age', b'2985013')])
+2026-07-26 02:27:40,808 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Salesforce/blip-image-captioning-base/82a37760796d32b1411fe092ab5d4e227313294b/config.json "HTTP/1.1 200 OK"
+2026-07-26 02:27:40,808 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,808 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:40,808 [DEBUG] response_closed.started
+2026-07-26 02:27:40,809 [DEBUG] response_closed.complete
+2026-07-26 02:27:40,826 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 302, b'Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'984'), (b'Connection', b'keep-alive'), (b'Date', b'Sun, 26 Jul 2026 06:27:37 GMT'), (b'Location', b'https://us.aws.cdn.hf.co/xet-bridge-us/63974666f74f697677e32689/e21c306dfb8dce08fc34be9e48bf4777757b04f5fdab3d3d6481b42c19b1ab9c?X-Xet-Cas-Uid=public&user_id=public&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1785050857&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy5hd3MuY2RuLmhmLmNvL3hldC1icmlkZ2UtdXMvNjM5NzQ2NjZmNzRmNjk3Njc3ZTMyNjg5L2UyMWMzMDZkZmI4ZGNlMDhmYzM0YmU5ZTQ4YmY0Nzc3NzU3YjA0ZjVmZGFiM2QzZDY0ODFiNDJjMTliMWFiOWNcXD9YLVhldC1DYXMtVWlkPXB1YmxpYyZ1c2VyX2lkPXB1YmxpYyZyZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPWlubGluZSUzQitmaWxlbmFtZSUyQSUzRFVURi04JTI3JTI3bW9kZWwuc2FmZXRlbnNvcnMlM0IrZmlsZW5hbWUlM0QlMjJtb2RlbC5zYWZldGVuc29ycyUyMiUzQiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRXBvY2hUaW1lIjoxNzg1MDUwODU3fX19XX0_&Signature=MEUCIQDioyvBV%7EZ8Areqo65FbjT1yVk2MmWk96577pF73lupPAIgHbuW%7EWwiPWk-3JXSFsvVAUikPW2X2aFt3ft99UEwxCE_&Key-Pair-Id=01KXEF4KZ1B6FV465MAWR4M21F'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-6a65a8d9-79fcbe5c74f065eb163b02e3;0ea3c972-3ec9-4a83-834c-0a4b3c8ac3be'), (b'RateLimit', b'"resolvers";r=2981;t=223'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'4c26dfece70e02028433dd192458a54b390b85d2'), (b'Accept-Ranges', b'bytes'), (b'X-HF-Warning', b'unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.'), (b'X-Hub-Cache', b'HIT'), (b'X-Linked-Size', b'989721336'), (b'X-Linked-ETag', b'"90f4c493dfc6f4c2152c8bfcfd52ee141055feb835eea2dceb8b9231e5dbf17c"'), (b'Cache-Control', b'no-store'), (b'X-Xet-Hash', b'e21c306dfb8dce08fc34be9e48bf4777757b04f5fdab3d3d6481b42c19b1ab9c'), (b'Link', b'<https://huggingface.co/api/models/Salesforce/blip-image-captioning-base/xet-read-token/4c26dfece70e02028433dd192458a54b390b85d2>; rel="xet-auth", <https://cas-server.xethub.hf.co/v1/reconstructions/e21c306dfb8dce08fc34be9e48bf4777757b04f5fdab3d3d6481b42c19b1ab9c>; rel="xet-reconstruction-info"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 147a9efb8cd71412151c5449818d4846.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'MIA50-P2'), (b'Alt-Svc', b'h3=":443"; ma=86400'), (b'X-Amz-Cf-Id', b'5qyxKQO45zmTqTpxpD5tzZOjtBqOtpXMOPOZzJ4E7YpkBQKcPXA5Pg==')])
+2026-07-26 02:27:40,826 [INFO] HTTP Request: HEAD https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/refs%2Fpr%2F52/model.safetensors "HTTP/1.1 302 Found"
+2026-07-26 02:27:40,827 [DEBUG] receive_response_body.started request=<Request [b'HEAD']>
+2026-07-26 02:27:40,827 [DEBUG] receive_response_body.complete
+2026-07-26 02:27:40,827 [DEBUG] response_closed.started
+2026-07-26 02:27:40,827 [DEBUG] response_closed.complete
+2026-07-26 02:27:41,214 [INFO] BLIP VLM chargé sur GPU
+2026-07-26 02:27:41,265 [INFO] TensorRT 11.1.0.106 disponible
+2026-07-26 02:27:41,268 [INFO] Serveur démarré: http://localhost:5000
+2026-07-26 02:27:41,275 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.1.143:5000
-Press CTRL+C to quit
-127.0.0.1 - - [26/Jul/2026 02:22:23] "GET / HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:23] "GET /static/style.css HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:23] "GET /static/app.js HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:28] "GET /corrections HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:33] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:34] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:34] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:34] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:35] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:35] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:36] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:36] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:37] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:37] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:38] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:38] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:38] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:39] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:39] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:39] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:40] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:40] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:41] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:41] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:41] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:42] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:42] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:43] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:43] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:43] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:44] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:44] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:44] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:45] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:45] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:45] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:46] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:46] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:46] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:47] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:47] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:48] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:51] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:52] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:52] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:52] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:53] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:53] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:54] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:54] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:55] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:55] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:55] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:56] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:56] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:56] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:57] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:57] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:58] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:58] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:58] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:58] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:59] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:59] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:22:59] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:00] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:00] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:00] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:01] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:01] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:02] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:02] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:03] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:03] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:04] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:04] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:05] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:06] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:06] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:07] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:07] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:07] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:08] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:08] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:08] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:09] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:09] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:09] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:09] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:10] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:10] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:11] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:14] "POST /fine-tune HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:15] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:15] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:16] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:16] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:16] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:17] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:17] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:17] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:18] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:18] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:19] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:19] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:19] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:20] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:20] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:20] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:21] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:21] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:21] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:21] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:22] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:22] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:23] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:23] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:24] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:24] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:25] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:25] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:26] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:26] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:26] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:26] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:27] "POST /corrections HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:27] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:27] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:28] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:28] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:29] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:29] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:30] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:30] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:31] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:31] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:31] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:32] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:32] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:32] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:33] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:33] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:34] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:34] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:35] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:35] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:35] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:36] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:36] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:36] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:37] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:38] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:38] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:39] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:39] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:40] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:41] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:41] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:42] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:42] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:42] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:42] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:43] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:43] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:43] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:44] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:44] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:45] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:45] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:45] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:46] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:46] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:46] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:47] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:47] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:48] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:48] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:49] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:49] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:50] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:50] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:51] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:51] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:52] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:52] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:52] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:53] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:53] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:54] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:54] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:55] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:55] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:56] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:56] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:57] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:57] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:57] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:58] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:58] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:59] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:23:59] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:00] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:00] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:01] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:01] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:02] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:02] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:03] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:03] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:04] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:04] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:05] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:05] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:06] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:06] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:07] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:07] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:08] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:09] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:09] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:10] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:10] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:10] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:10] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:11] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:11] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:12] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:12] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:13] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:13] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:13] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:14] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:14] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:15] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:15] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:16] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:16] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:17] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:17] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:17] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:18] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:18] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:19] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:19] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:19] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:20] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:20] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:21] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:21] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:22] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:22] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:23] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:23] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:24] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:24] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:25] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:25] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:26] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:26] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:27] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:27] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:28] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:28] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:28] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:29] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:30] "POST /detect HTTP/1.1" 200 -
-127.0.0.1 - - [26/Jul/2026 02:24:30] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:27:41,276 [INFO] [33mPress CTRL+C to quit[0m
+2026-07-26 02:30:52,418 [INFO] 127.0.0.1 - - [26/Jul/2026 02:30:52] "GET / HTTP/1.1" 200 -
+2026-07-26 02:30:52,473 [INFO] 127.0.0.1 - - [26/Jul/2026 02:30:52] "GET /static/style.css HTTP/1.1" 200 -
+2026-07-26 02:30:52,667 [INFO] 127.0.0.1 - - [26/Jul/2026 02:30:52] "GET /static/app.js HTTP/1.1" 200 -
+2026-07-26 02:31:00,968 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:00] "GET /corrections HTTP/1.1" 200 -
+2026-07-26 02:31:01,236 [INFO] Correction: Ceci \u2192 Cracker.
+2026-07-26 02:31:01,236 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:01] "POST /corrections HTTP/1.1" 200 -
+2026-07-26 02:31:01,959 [DEBUG] VLM: a man standing in front of a blue light (281ms)
+2026-07-26 02:31:01,960 [INFO] Frame #1: 1 objets, 678ms
+2026-07-26 02:31:01,961 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:01] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:02,217 [DEBUG] VLM: a man in a dark room playing a guitar (194ms)
+2026-07-26 02:31:02,218 [INFO] Frame #2: 1 objets, 235ms
+2026-07-26 02:31:02,219 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:02] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:02,765 [DEBUG] VLM: a man sitting at a table in front of a blue light (185ms)
+2026-07-26 02:31:02,765 [INFO] Frame #3: 1 objets, 225ms
+2026-07-26 02:31:02,766 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:02] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:02,984 [DEBUG] VLM: a man in a dark room playing a guitar (156ms)
+2026-07-26 02:31:02,984 [INFO] Frame #4: 1 objets, 194ms
+2026-07-26 02:31:02,985 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:02] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:03,281 [DEBUG] VLM: a man in a dark room with a blue light (156ms)
+2026-07-26 02:31:03,282 [INFO] Frame #5: 1 objets, 196ms
+2026-07-26 02:31:03,283 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:03] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:03,534 [DEBUG] VLM: a man sitting at a table with a laptop in front of him (191ms)
+2026-07-26 02:31:03,536 [INFO] Frame #6: 1 objets, 231ms
+2026-07-26 02:31:03,536 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:03] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:03,832 [DEBUG] VLM: a man sitting at a table with a laptop in front of him (190ms)
+2026-07-26 02:31:03,833 [INFO] Frame #7: 1 objets, 229ms
+2026-07-26 02:31:03,833 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:03] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:04,072 [DEBUG] VLM: a man sitting at a table in front of a computer (181ms)
+2026-07-26 02:31:04,074 [INFO] Frame #8: 1 objets, 221ms
+2026-07-26 02:31:04,074 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:04] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:04,367 [DEBUG] VLM: a man in a dark room with a blue light (180ms)
+2026-07-26 02:31:04,367 [INFO] Frame #9: 1 objets, 218ms
+2026-07-26 02:31:04,367 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:04] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:04,606 [DEBUG] VLM: a man sitting at a table in front of a blue light (183ms)
+2026-07-26 02:31:04,607 [INFO] Frame #10: 1 objets, 224ms
+2026-07-26 02:31:04,608 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:04] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:04,868 [DEBUG] VLM: a man sitting in front of a laptop computer (149ms)
+2026-07-26 02:31:04,870 [INFO] Frame #11: 1 objets, 189ms
+2026-07-26 02:31:04,870 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:04] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:05,176 [DEBUG] VLM: a man sitting at a table with a laptop in front of him (203ms)
+2026-07-26 02:31:05,178 [INFO] Frame #12: 1 objets, 247ms
+2026-07-26 02:31:05,178 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:05] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:05,404 [DEBUG] VLM: a man sitting at a table in front of a computer (180ms)
+2026-07-26 02:31:05,405 [INFO] Frame #13: 1 objets, 220ms
+2026-07-26 02:31:05,406 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:05] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:05,945 [DEBUG] VLM: a man sitting at a table in front of a blue light (179ms)
+2026-07-26 02:31:05,946 [INFO] Frame #14: 1 objets, 218ms
+2026-07-26 02:31:05,947 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:05] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:06,205 [DEBUG] VLM: a man sitting at a table with a laptop in front of him (191ms)
+2026-07-26 02:31:06,207 [INFO] Frame #15: 1 objets, 230ms
+2026-07-26 02:31:06,207 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:06] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:06,458 [DEBUG] VLM: a man in a dark room with a blue light (161ms)
+2026-07-26 02:31:06,460 [INFO] Frame #16: 1 objets, 201ms
+2026-07-26 02:31:06,460 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:06] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:06,761 [DEBUG] VLM: a man sitting at a table with a laptop in front of him (197ms)
+2026-07-26 02:31:06,763 [INFO] Frame #17: 1 objets, 239ms
+2026-07-26 02:31:06,763 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:06] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:07,008 [DEBUG] VLM: a man sitting at a table with a laptop in front of him (197ms)
+2026-07-26 02:31:07,008 [INFO] Frame #18: 1 objets, 238ms
+2026-07-26 02:31:07,009 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:07] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:07,540 [DEBUG] VLM: a man sitting at a table in front of a computer (179ms)
+2026-07-26 02:31:07,541 [INFO] Frame #19: 1 objets, 219ms
+2026-07-26 02:31:07,541 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:07] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:07,782 [DEBUG] VLM: a man standing in front of a blue light (157ms)
+2026-07-26 02:31:07,784 [INFO] Frame #20: 1 objets, 196ms
+2026-07-26 02:31:07,784 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:07] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:08,096 [DEBUG] VLM: a man sitting at a table with a laptop in front of him (203ms)
+2026-07-26 02:31:08,097 [INFO] Frame #21: 1 objets, 243ms
+2026-07-26 02:31:08,098 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:08] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:08,341 [DEBUG] VLM: a man sitting at a table with a laptop in front of him (198ms)
+2026-07-26 02:31:08,342 [INFO] Frame #22: 1 objets, 236ms
+2026-07-26 02:31:08,342 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:08] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:08,894 [DEBUG] VLM: a man sitting at a table with a laptop in front of him (195ms)
+2026-07-26 02:31:08,895 [INFO] Frame #23: 1 objets, 235ms
+2026-07-26 02:31:08,896 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:08] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:09,132 [DEBUG] VLM: a man sitting in front of a laptop computer (166ms)
+2026-07-26 02:31:09,133 [INFO] Frame #24: 1 objets, 205ms
+2026-07-26 02:31:09,133 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:09] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:09,441 [DEBUG] VLM: a man sitting at a table in front of a computer (190ms)
+2026-07-26 02:31:09,443 [INFO] Frame #25: 1 objets, 235ms
+2026-07-26 02:31:09,444 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:09] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:09,647 [DEBUG] VLM: a man in a dark room playing a guitar (157ms)
+2026-07-26 02:31:09,647 [INFO] Frame #26: 1 objets, 195ms
+2026-07-26 02:31:09,648 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:09] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:10,181 [DEBUG] VLM: a man in a dark room playing a guitar (185ms)
+2026-07-26 02:31:10,182 [INFO] Frame #27: 1 objets, 224ms
+2026-07-26 02:31:10,182 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:10] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:10,423 [DEBUG] VLM: a man in a dark room playing a guitar (163ms)
+2026-07-26 02:31:10,425 [INFO] Frame #28: 1 objets, 203ms
+2026-07-26 02:31:10,425 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:10] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:10,741 [DEBUG] VLM: a man sitting at a table in front of a blue light (194ms)
+2026-07-26 02:31:10,742 [INFO] Frame #29: 1 objets, 238ms
+2026-07-26 02:31:10,743 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:10] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:13,007 [DEBUG] VLM: a man in a dark room with a blue light on the wall (209ms)
+2026-07-26 02:31:13,008 [INFO] Frame #30: 1 objets, 252ms
+2026-07-26 02:31:13,009 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:13] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:13,553 [DEBUG] VLM: a man sitting at a table with a laptop in front of him (197ms)
+2026-07-26 02:31:13,554 [INFO] Frame #31: 1 objets, 236ms
+2026-07-26 02:31:13,555 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:13] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:13,815 [DEBUG] VLM: a man in a dark room with a blue light on the wall (193ms)
+2026-07-26 02:31:13,815 [INFO] Frame #32: 1 objets, 233ms
+2026-07-26 02:31:13,815 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:13] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:14,101 [DEBUG] VLM: a man sitting at a table with a laptop in front of him (198ms)
+2026-07-26 02:31:14,102 [INFO] Frame #33: 1 objets, 237ms
+2026-07-26 02:31:14,103 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:14] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:14,385 [DEBUG] VLM: a man in a dark room with a blue light on the wall (206ms)
+2026-07-26 02:31:14,386 [INFO] Frame #34: 1 objets, 255ms
+2026-07-26 02:31:14,387 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:14] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:14,650 [DEBUG] VLM: a man sitting at a table in front of a blue light (196ms)
+2026-07-26 02:31:14,651 [INFO] Frame #35: 1 objets, 240ms
+2026-07-26 02:31:14,651 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:14] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:14,943 [DEBUG] VLM: a man sitting at a table with a laptop in front of him (194ms)
+2026-07-26 02:31:14,945 [INFO] Frame #36: 1 objets, 235ms
+2026-07-26 02:31:14,945 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:14] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:15,195 [DEBUG] VLM: a man sitting at a table in front of a blue light (195ms)
+2026-07-26 02:31:15,196 [INFO] Frame #37: 1 objets, 234ms
+2026-07-26 02:31:15,196 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:15] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:15,499 [DEBUG] VLM: a man sitting at a table with a laptop in front of him (202ms)
+2026-07-26 02:31:15,500 [INFO] Frame #38: 1 objets, 241ms
+2026-07-26 02:31:15,501 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:15] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:15,761 [DEBUG] VLM: a man in a dark room with a blue light on his face (213ms)
+2026-07-26 02:31:15,763 [INFO] Frame #39: 1 objets, 255ms
+2026-07-26 02:31:15,763 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:15] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:16,323 [DEBUG] VLM: a man in a dark room with a blue light on his face (205ms)
+2026-07-26 02:31:16,325 [INFO] Frame #40: 1 objets, 250ms
+2026-07-26 02:31:16,325 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:16] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:16,585 [DEBUG] VLM: a man in a dark room with a laptop and headphones (210ms)
+2026-07-26 02:31:16,585 [INFO] Frame #41: 1 objets, 253ms
+2026-07-26 02:31:16,586 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:16] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:17,146 [DEBUG] VLM: a man in a dark room with a blue light on his face (208ms)
+2026-07-26 02:31:17,147 [INFO] Frame #42: 1 objets, 251ms
+2026-07-26 02:31:17,148 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:17] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:17,400 [DEBUG] VLM: a man in a dark room with a blue light on his face (204ms)
+2026-07-26 02:31:17,402 [INFO] Frame #43: 1 objets, 246ms
+2026-07-26 02:31:17,402 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:17] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:17,949 [DEBUG] VLM: a man standing in front of a blue light (192ms)
+2026-07-26 02:31:17,949 [INFO] Frame #44: 1 objets, 234ms
+2026-07-26 02:31:17,949 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:17] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:18,222 [DEBUG] VLM: a man standing in front of a blue light (202ms)
+2026-07-26 02:31:18,224 [INFO] Frame #45: 1 objets, 244ms
+2026-07-26 02:31:18,224 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:18] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:18,505 [DEBUG] VLM: a man in a dark room with a blue light on his face (206ms)
+2026-07-26 02:31:18,507 [INFO] Frame #46: 1 objets, 246ms
+2026-07-26 02:31:18,507 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:18] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:18,785 [DEBUG] VLM: a man in a dark room with a blue light on his face (206ms)
+2026-07-26 02:31:18,786 [INFO] Frame #47: 1 objets, 245ms
+2026-07-26 02:31:18,786 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:18] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:19,054 [DEBUG] VLM: a man in a dark room with a laptop and headphones (191ms)
+2026-07-26 02:31:19,056 [INFO] Frame #48: 1 objets, 233ms
+2026-07-26 02:31:19,056 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:19] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:19,311 [DEBUG] VLM: a man standing in front of a blue light (166ms)
+2026-07-26 02:31:19,311 [INFO] Frame #49: 1 objets, 206ms
+2026-07-26 02:31:19,311 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:19] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:19,613 [DEBUG] VLM: a man in a dark room with a blue light on his face (201ms)
+2026-07-26 02:31:19,615 [INFO] Frame #50: 1 objets, 243ms
+2026-07-26 02:31:19,615 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:19] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:19,869 [DEBUG] VLM: a man in a dark room with a blue light on his face (207ms)
+2026-07-26 02:31:19,871 [INFO] Frame #51: 1 objets, 250ms
+2026-07-26 02:31:19,871 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:19] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:20,222 [INFO] Frame #52: 1 objets, 41ms
+2026-07-26 02:31:20,223 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:20] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:20,491 [INFO] Frame #53: 1 objets, 43ms
+2026-07-26 02:31:20,492 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:20] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:20,579 [INFO] Frame #54: 1 objets, 39ms
+2026-07-26 02:31:20,580 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:20] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:21,050 [DEBUG] VLM: a man in a dark room with a blue light (198ms)
+2026-07-26 02:31:21,052 [INFO] Frame #55: 1 objets, 243ms
+2026-07-26 02:31:21,052 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:21] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:21,307 [DEBUG] VLM: a man in a dark room with a laptop and headphones (208ms)
+2026-07-26 02:31:21,309 [INFO] Frame #56: 1 objets, 250ms
+2026-07-26 02:31:21,309 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:21] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:21,868 [DEBUG] VLM: a man in a dark room with a blue light on his face (206ms)
+2026-07-26 02:31:21,870 [INFO] Frame #57: 1 objets, 250ms
+2026-07-26 02:31:21,870 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:21] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:22,125 [DEBUG] VLM: a man in a dark room with a laptop and headphones (208ms)
+2026-07-26 02:31:22,126 [INFO] Frame #58: 1 objets, 248ms
+2026-07-26 02:31:22,126 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:22] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:22,703 [DEBUG] VLM: a man in a dark room with a laptop and headphones (214ms)
+2026-07-26 02:31:22,705 [INFO] Frame #59: 1 objets, 260ms
+2026-07-26 02:31:22,705 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:22] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:22,971 [DEBUG] VLM: a man in a dark room with a laptop and headphones (214ms)
+2026-07-26 02:31:22,973 [INFO] Frame #60: 1 objets, 257ms
+2026-07-26 02:31:22,973 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:22] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:23,534 [DEBUG] VLM: a man in a dark room with a blue light on his face (200ms)
+2026-07-26 02:31:23,536 [INFO] Frame #61: 1 objets, 243ms
+2026-07-26 02:31:23,536 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:23] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:23,791 [DEBUG] VLM: a man in a dark room with a blue light on his face (193ms)
+2026-07-26 02:31:23,792 [INFO] Frame #62: 1 objets, 232ms
+2026-07-26 02:31:23,792 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:23] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:24,086 [DEBUG] VLM: a man in a dark room with a blue light on his face (192ms)
+2026-07-26 02:31:24,088 [INFO] Frame #63: 1 objets, 231ms
+2026-07-26 02:31:24,088 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:24] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:24,340 [DEBUG] VLM: a man in a dark room with a blue light on his face (194ms)
+2026-07-26 02:31:24,341 [INFO] Frame #64: 1 objets, 234ms
+2026-07-26 02:31:24,341 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:24] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:24,641 [DEBUG] VLM: a man in a dark room with a blue light on his face (197ms)
+2026-07-26 02:31:24,641 [INFO] Frame #65: 1 objets, 237ms
+2026-07-26 02:31:24,641 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:24] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:24,895 [DEBUG] VLM: a man in a dark room with a blue light on his face (199ms)
+2026-07-26 02:31:25,084 [DEBUG] VLM: a black and white photo of the moon in the night sky (188ms)
+2026-07-26 02:31:25,085 [INFO] Frame #66: 2 objets, 429ms
+2026-07-26 02:31:25,085 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:25] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:25,339 [DEBUG] VLM: a man standing in front of a blue light (192ms)
+2026-07-26 02:31:25,341 [INFO] Frame #67: 1 objets, 249ms
+2026-07-26 02:31:25,341 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:25] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:25,888 [DEBUG] VLM: a man standing in front of a blue light (191ms)
+2026-07-26 02:31:25,890 [INFO] Frame #68: 1 objets, 229ms
+2026-07-26 02:31:25,890 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:25] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:26,165 [DEBUG] VLM: a man standing in front of a blue light (196ms)
+2026-07-26 02:31:26,165 [INFO] Frame #69: 1 objets, 233ms
+2026-07-26 02:31:26,166 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:26] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:26,446 [DEBUG] VLM: a man in a dark room with a blue light on the wall (195ms)
+2026-07-26 02:31:26,448 [INFO] Frame #70: 1 objets, 234ms
+2026-07-26 02:31:26,448 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:26] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:26,709 [DEBUG] VLM: a man in a dark room with a blue light on his face (189ms)
+2026-07-26 02:31:26,711 [INFO] Frame #71: 1 objets, 229ms
+2026-07-26 02:31:26,711 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:26] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:26,959 [DEBUG] VLM: a man in a dark room with a blue light (153ms)
+2026-07-26 02:31:27,139 [DEBUG] VLM: a black and white photo of the moon in the night sky (179ms)
+2026-07-26 02:31:27,140 [INFO] Frame #72: 2 objets, 375ms
+2026-07-26 02:31:27,140 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:27] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:27,379 [DEBUG] VLM: a man in a dark room with a blue light on the wall (193ms)
+2026-07-26 02:31:27,379 [INFO] Frame #73: 1 objets, 232ms
+2026-07-26 02:31:27,379 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:27] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:27,923 [DEBUG] VLM: a man in a dark room with a blue light (181ms)
+2026-07-26 02:31:27,925 [INFO] Frame #74: 1 objets, 222ms
+2026-07-26 02:31:27,925 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:27] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:28,150 [DEBUG] VLM: a man standing in front of a blue light (159ms)
+2026-07-26 02:31:28,152 [INFO] Frame #75: 1 objets, 199ms
+2026-07-26 02:31:28,152 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:28] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:28,416 [DEBUG] VLM: a man sitting in front of a computer (143ms)
+2026-07-26 02:31:28,417 [INFO] Frame #76: 1 objets, 181ms
+2026-07-26 02:31:28,418 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:28] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:28,653 [DEBUG] VLM: a man sitting in front of a computer (144ms)
+2026-07-26 02:31:28,654 [INFO] Frame #77: 1 objets, 184ms
+2026-07-26 02:31:28,654 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:28] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:28,917 [DEBUG] VLM: a man sitting in front of a computer (145ms)
+2026-07-26 02:31:28,917 [INFO] Frame #78: 1 objets, 182ms
+2026-07-26 02:31:28,918 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:28] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:29,150 [DEBUG] VLM: a man sitting in front of a computer (144ms)
+2026-07-26 02:31:29,152 [INFO] Frame #79: 1 objets, 183ms
+2026-07-26 02:31:29,153 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:29] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:29,422 [DEBUG] VLM: a man sitting in front of a computer (145ms)
+2026-07-26 02:31:29,423 [INFO] Frame #80: 1 objets, 186ms
+2026-07-26 02:31:29,423 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:29] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:29,665 [DEBUG] VLM: a man sitting in front of a computer (152ms)
+2026-07-26 02:31:29,666 [INFO] Frame #81: 1 objets, 193ms
+2026-07-26 02:31:29,667 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:29] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:29,925 [DEBUG] VLM: a man sitting in front of a computer (147ms)
+2026-07-26 02:31:29,927 [INFO] Frame #82: 1 objets, 188ms
+2026-07-26 02:31:29,927 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:29] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:30,222 [DEBUG] VLM: a man sitting at a table with a laptop and headphones on (194ms)
+2026-07-26 02:31:30,222 [INFO] Frame #83: 1 objets, 232ms
+2026-07-26 02:31:30,223 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:30] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:30,425 [DEBUG] VLM: a man sitting in front of a computer (144ms)
+2026-07-26 02:31:30,426 [INFO] Frame #84: 1 objets, 184ms
+2026-07-26 02:31:30,426 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:30] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:30,771 [DEBUG] VLM: a man sitting at a table with a laptop in front of him (190ms)
+2026-07-26 02:31:30,772 [INFO] Frame #85: 1 objets, 229ms
+2026-07-26 02:31:30,773 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:30] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:30,959 [DEBUG] VLM: a man sitting in front of a computer (140ms)
+2026-07-26 02:31:30,959 [INFO] Frame #86: 1 objets, 179ms
+2026-07-26 02:31:30,959 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:30] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:31,503 [DEBUG] VLM: a man in a dark room with a blue light on the wall (194ms)
+2026-07-26 02:31:31,503 [INFO] Frame #87: 1 objets, 235ms
+2026-07-26 02:31:31,503 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:31] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:31,729 [DEBUG] VLM: a man in a dark room with headphones on (157ms)
+2026-07-26 02:31:31,731 [INFO] Frame #88: 1 objets, 196ms
+2026-07-26 02:31:31,731 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:31] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:32,055 [DEBUG] VLM: a man in a dark room with a blue light on the wall (198ms)
+2026-07-26 02:31:32,057 [INFO] Frame #89: 1 objets, 239ms
+2026-07-26 02:31:32,057 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:32] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:32,259 [DEBUG] VLM: a man in a dark room with headphones on (156ms)
+2026-07-26 02:31:32,261 [INFO] Frame #90: 1 objets, 196ms
+2026-07-26 02:31:32,261 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:32] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:32,790 [DEBUG] VLM: a man standing in front of a blue light (180ms)
+2026-07-26 02:31:32,791 [INFO] Frame #91: 1 objets, 219ms
+2026-07-26 02:31:32,791 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:32] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:33,031 [DEBUG] VLM: a man in a dark room playing a guitar (153ms)
+2026-07-26 02:31:33,032 [INFO] Frame #92: 1 objets, 193ms
+2026-07-26 02:31:33,033 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:33] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:33,145 [INFO] Frame #93: 0 objets, 37ms
+2026-07-26 02:31:33,145 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:33] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:33,379 [INFO] Frame #94: 0 objets, 37ms
+2026-07-26 02:31:33,381 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:33] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:33,668 [DEBUG] VLM: a woman in a dark room with a blue light (158ms)
+2026-07-26 02:31:33,670 [INFO] Frame #95: 1 objets, 202ms
+2026-07-26 02:31:33,670 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:33] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:33,952 [DEBUG] VLM: a woman in a dark room with a blue light on her face (207ms)
+2026-07-26 02:31:33,954 [INFO] Frame #96: 1 objets, 249ms
+2026-07-26 02:31:33,954 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:33] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:34,218 [DEBUG] VLM: a man in a black shirt with a blue light on his face (191ms)
+2026-07-26 02:31:34,218 [INFO] Frame #97: 1 objets, 229ms
+2026-07-26 02:31:34,218 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:34] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:34,501 [DEBUG] VLM: a man in a dark room with a blue light on his face (191ms)
+2026-07-26 02:31:34,502 [INFO] Frame #98: 1 objets, 229ms
+2026-07-26 02:31:34,502 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:34] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:34,764 [DEBUG] VLM: a man in a dark room with a blue light on his face (187ms)
+2026-07-26 02:31:34,765 [INFO] Frame #99: 1 objets, 227ms
+2026-07-26 02:31:34,765 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:34] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:35,049 [DEBUG] VLM: a man in a dark room with a blue light on his face (192ms)
+2026-07-26 02:31:35,051 [INFO] Frame #100: 1 objets, 231ms
+2026-07-26 02:31:35,051 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:35] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:35,307 [DEBUG] VLM: a man in a black shirt is holding a cell phone (187ms)
+2026-07-26 02:31:35,309 [INFO] Frame #101: 1 objets, 225ms
+2026-07-26 02:31:35,310 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:35] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:35,558 [DEBUG] VLM: a man in a black shirt holding a cell phone (155ms)
+2026-07-26 02:31:35,559 [INFO] Frame #102: 1 objets, 194ms
+2026-07-26 02:31:35,559 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:35] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:35,877 [DEBUG] VLM: a man in a black shirt is holding a blue light in his hand (206ms)
+2026-07-26 02:31:35,879 [INFO] Frame #103: 1 objets, 246ms
+2026-07-26 02:31:35,879 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:35] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:36,094 [DEBUG] VLM: a man in a black shirt is holding a cell phone (169ms)
+2026-07-26 02:31:36,096 [INFO] Frame #104: 1 objets, 209ms
+2026-07-26 02:31:36,096 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:36] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:36,672 [DEBUG] VLM: a black cat in the dark with a blue light on it ' s face (218ms)
+2026-07-26 02:31:36,674 [INFO] Frame #105: 1 objets, 257ms
+2026-07-26 02:31:36,674 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:36] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:36,717 [INFO] Frame #106: 0 objets, 36ms
+2026-07-26 02:31:36,718 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:36] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:37,133 [INFO] Frame #107: 0 objets, 36ms
+2026-07-26 02:31:37,135 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:37] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:37,399 [INFO] Frame #108: 0 objets, 37ms
+2026-07-26 02:31:37,401 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:37] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:37,655 [DEBUG] VLM: a black cat sitting on top of a table (159ms)
+2026-07-26 02:31:37,657 [INFO] Frame #109: 1 objets, 199ms
+2026-07-26 02:31:37,657 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:37] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:37,761 [INFO] Frame #110: 0 objets, 38ms
+2026-07-26 02:31:37,761 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:37] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:38,174 [DEBUG] VLM: a person holding a piece of paper in their hand (159ms)
+2026-07-26 02:31:38,175 [INFO] Frame #111: 1 objets, 200ms
+2026-07-26 02:31:38,176 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:38] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:38,379 [DEBUG] VLM: a person holding a piece of food in their hand (158ms)
+2026-07-26 02:31:38,380 [INFO] Frame #112: 1 objets, 197ms
+2026-07-26 02:31:38,380 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:38] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:38,901 [DEBUG] VLM: a person holding a piece of food in their hand (165ms)
+2026-07-26 02:31:38,902 [INFO] Frame #113: 1 objets, 203ms
+2026-07-26 02:31:38,902 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:38] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:39,158 [DEBUG] VLM: a person holding a piece of food in their hand (155ms)
+2026-07-26 02:31:39,160 [INFO] Frame #114: 1 objets, 193ms
+2026-07-26 02:31:39,160 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:39] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:39,453 [DEBUG] VLM: a person holding a piece of bread in their hand (193ms)
+2026-07-26 02:31:39,455 [INFO] Frame #115: 1 objets, 237ms
+2026-07-26 02:31:39,456 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:39] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:39,680 [DEBUG] VLM: a person holding a piece of food in their hand (171ms)
+2026-07-26 02:31:39,681 [INFO] Frame #116: 1 objets, 211ms
+2026-07-26 02:31:39,681 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:39] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:39,981 [DEBUG] VLM: a person holding a piece of bread in their hand (175ms)
+2026-07-26 02:31:39,983 [INFO] Frame #117: 1 objets, 215ms
+2026-07-26 02:31:39,983 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:39] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:40,201 [DEBUG] VLM: a person holding a piece of food in their hand (171ms)
+2026-07-26 02:31:40,202 [INFO] Frame #118: 1 objets, 211ms
+2026-07-26 02:31:40,203 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:40] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:40,752 [DEBUG] VLM: a man in a dark room with a blue light on his face (194ms)
+2026-07-26 02:31:40,754 [INFO] Frame #119: 1 objets, 234ms
+2026-07-26 02:31:40,754 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:40] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:41,018 [DEBUG] VLM: a man standing in front of a blue light (191ms)
+2026-07-26 02:31:41,018 [INFO] Frame #120: 1 objets, 230ms
+2026-07-26 02:31:41,019 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:41] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:41,272 [DEBUG] VLM: a man standing in front of a blue light (161ms)
+2026-07-26 02:31:41,273 [INFO] Frame #121: 1 objets, 201ms
+2026-07-26 02:31:41,274 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:41] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:41,571 [DEBUG] VLM: a man in a dark room with a blue light on the wall (193ms)
+2026-07-26 02:31:41,573 [INFO] Frame #122: 1 objets, 234ms
+2026-07-26 02:31:41,573 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:41] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:41,790 [DEBUG] VLM: a man sitting in front of a blue light (159ms)
+2026-07-26 02:31:41,792 [INFO] Frame #123: 1 objets, 199ms
+2026-07-26 02:31:41,792 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:41] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:42,094 [DEBUG] VLM: a man sitting in front of a blue light (159ms)
+2026-07-26 02:31:42,096 [INFO] Frame #124: 1 objets, 204ms
+2026-07-26 02:31:42,096 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:42] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:42,298 [DEBUG] VLM: a man standing in front of a blue light (156ms)
+2026-07-26 02:31:42,299 [INFO] Frame #125: 1 objets, 194ms
+2026-07-26 02:31:42,299 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:42] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:42,812 [DEBUG] VLM: a man standing in front of a blue light (158ms)
+2026-07-26 02:31:42,814 [INFO] Frame #126: 1 objets, 196ms
+2026-07-26 02:31:42,814 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:42] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:43,110 [DEBUG] VLM: a man in a dark room with headphones on (188ms)
+2026-07-26 02:31:43,112 [INFO] Frame #127: 1 objets, 228ms
+2026-07-26 02:31:43,112 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:43] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:43,331 [DEBUG] VLM: a man in a dark room with headphones on (160ms)
+2026-07-26 02:31:43,333 [INFO] Frame #128: 1 objets, 199ms
+2026-07-26 02:31:43,333 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:43] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:43,670 [DEBUG] VLM: a man in a dark room with a blue light (195ms)
+2026-07-26 02:31:43,672 [INFO] Frame #129: 1 objets, 237ms
+2026-07-26 02:31:43,672 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:43] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:43,878 [DEBUG] VLM: a man sitting in front of a computer (159ms)
+2026-07-26 02:31:43,879 [INFO] Frame #130: 1 objets, 199ms
+2026-07-26 02:31:43,879 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:43] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:44,388 [DEBUG] VLM: a man sitting in front of a laptop computer (161ms)
+2026-07-26 02:31:44,390 [INFO] Frame #131: 1 objets, 201ms
+2026-07-26 02:31:44,390 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:44] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:44,676 [DEBUG] VLM: a man in a dark room with a blue light on the wall (194ms)
+2026-07-26 02:31:44,677 [INFO] Frame #132: 1 objets, 235ms
+2026-07-26 02:31:44,677 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:44] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:44,950 [DEBUG] VLM: a man in a dark room with a blue light on his face (201ms)
+2026-07-26 02:31:44,952 [INFO] Frame #133: 1 objets, 243ms
+2026-07-26 02:31:44,952 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:44] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:45,223 [DEBUG] VLM: a man in a dark room with a blue light on his face (192ms)
+2026-07-26 02:31:45,223 [INFO] Frame #134: 1 objets, 231ms
+2026-07-26 02:31:45,224 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:45] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:45,471 [DEBUG] VLM: a man standing in front of a blue light (157ms)
+2026-07-26 02:31:45,473 [INFO] Frame #135: 1 objets, 197ms
+2026-07-26 02:31:45,473 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:45] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:45,777 [DEBUG] VLM: a man in a dark room with a blue light on his face (196ms)
+2026-07-26 02:31:45,778 [INFO] Frame #136: 1 objets, 236ms
+2026-07-26 02:31:45,779 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:45] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:46,024 [DEBUG] VLM: a man in a dark room with a blue light on his face (195ms)
+2026-07-26 02:31:46,025 [INFO] Frame #137: 1 objets, 237ms
+2026-07-26 02:31:46,026 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:46] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:46,583 [DEBUG] VLM: a man in a dark room with a blue light on his face (195ms)
+2026-07-26 02:31:46,584 [INFO] Frame #138: 1 objets, 238ms
+2026-07-26 02:31:46,584 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:46] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:46,827 [DEBUG] VLM: a man in a dark room with a blue light on his face (191ms)
+2026-07-26 02:31:46,829 [INFO] Frame #139: 1 objets, 230ms
+2026-07-26 02:31:46,829 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:46] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:47,080 [DEBUG] VLM: a man sitting in front of a laptop computer (143ms)
+2026-07-26 02:31:47,081 [INFO] Frame #140: 1 objets, 183ms
+2026-07-26 02:31:47,082 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:47] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:47,380 [DEBUG] VLM: a man in a dark room with a blue light on his face (191ms)
+2026-07-26 02:31:47,382 [INFO] Frame #141: 1 objets, 230ms
+2026-07-26 02:31:47,382 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:47] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:47,607 [DEBUG] VLM: a man in a dark room playing a guitar (180ms)
+2026-07-26 02:31:47,609 [INFO] Frame #142: 1 objets, 219ms
+2026-07-26 02:31:47,609 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:47] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:48,129 [DEBUG] VLM: a man sitting in front of a laptop computer (166ms)
+2026-07-26 02:31:48,131 [INFO] Frame #143: 1 objets, 205ms
+2026-07-26 02:31:48,131 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:48] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:48,421 [DEBUG] VLM: a man in a dark room with a laptop and headphones (203ms)
+2026-07-26 02:31:48,423 [INFO] Frame #144: 1 objets, 244ms
+2026-07-26 02:31:48,424 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:48] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:48,646 [DEBUG] VLM: a man in a dark room playing a guitar (163ms)
+2026-07-26 02:31:48,647 [INFO] Frame #145: 1 objets, 205ms
+2026-07-26 02:31:48,648 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:48] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:48,978 [DEBUG] VLM: a man in a dark room with a laptop and headphones (205ms)
+2026-07-26 02:31:48,980 [INFO] Frame #146: 1 objets, 246ms
+2026-07-26 02:31:48,980 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:48] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:49,209 [DEBUG] VLM: a man in a dark room with headphones on (183ms)
+2026-07-26 02:31:49,209 [INFO] Frame #147: 1 objets, 222ms
+2026-07-26 02:31:49,210 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:49] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:49,746 [DEBUG] VLM: a man in a dark room with headphones on (179ms)
+2026-07-26 02:31:49,748 [INFO] Frame #148: 1 objets, 220ms
+2026-07-26 02:31:49,748 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:49] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:50,027 [DEBUG] VLM: a man in a dark room with a laptop and headphones (196ms)
+2026-07-26 02:31:50,029 [INFO] Frame #149: 1 objets, 234ms
+2026-07-26 02:31:50,029 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:50] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:50,257 [DEBUG] VLM: a man in a dark room with headphones on (156ms)
+2026-07-26 02:31:50,257 [INFO] Frame #150: 1 objets, 195ms
+2026-07-26 02:31:50,258 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:50] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:50,431 [INFO] Session exportée: C:\Users\user\Documents\h\logs\session_20260726_023150.json
+2026-07-26 02:31:50,441 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:50] "GET /export HTTP/1.1" 200 -
+2026-07-26 02:31:50,616 [DEBUG] VLM: a man in a dark room with a laptop and headphones (232ms)
+2026-07-26 02:31:50,617 [INFO] Frame #151: 1 objets, 269ms
+2026-07-26 02:31:50,617 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:50] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:50,874 [DEBUG] VLM: a man in a dark room with a laptop and headphones (202ms)
+2026-07-26 02:31:50,876 [INFO] Frame #152: 1 objets, 251ms
+2026-07-26 02:31:50,876 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:50] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:51,439 [INFO] HTML exporté: C:\Users\user\Documents\h\logs\session_20260726_023151.html
+2026-07-26 02:31:51,439 [DEBUG] VLM: a man in a dark room with headphones on (200ms)
+2026-07-26 02:31:51,441 [INFO] Frame #153: 1 objets, 242ms
+2026-07-26 02:31:51,442 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:51] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:51,453 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:51] "GET /export/html HTTP/1.1" 200 -
+2026-07-26 02:31:51,881 [DEBUG] VLM: a man in a dark room with a laptop and headphones (210ms)
+2026-07-26 02:31:51,883 [INFO] Frame #154: 1 objets, 255ms
+2026-07-26 02:31:51,883 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:51] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:52,095 [DEBUG] VLM: a man sitting in front of a laptop computer (165ms)
+2026-07-26 02:31:52,095 [INFO] Frame #155: 1 objets, 205ms
+2026-07-26 02:31:52,095 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:52] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:52,654 [DEBUG] VLM: a man in a dark room with a laptop and headphones (201ms)
+2026-07-26 02:31:52,656 [INFO] Frame #156: 1 objets, 243ms
+2026-07-26 02:31:52,656 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:52] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:52,924 [DEBUG] VLM: a man in a dark room with a blue light on his face (203ms)
+2026-07-26 02:31:52,926 [INFO] Frame #157: 1 objets, 245ms
+2026-07-26 02:31:52,926 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:52] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:53,233 [DEBUG] VLM: a man in a dark room with a blue light on his face (216ms)
+2026-07-26 02:31:53,234 [INFO] Frame #158: 1 objets, 256ms
+2026-07-26 02:31:53,235 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:53] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:53,238 [INFO] CSV exporté: C:\Users\user\Documents\h\logs\detections_20260726_023153.csv
+2026-07-26 02:31:53,248 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:53] "GET /export/csv HTTP/1.1" 200 -
+2026-07-26 02:31:53,727 [DEBUG] VLM: a man in a dark room with a laptop and headphones (206ms)
+2026-07-26 02:31:53,728 [INFO] Frame #159: 1 objets, 250ms
+2026-07-26 02:31:53,729 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:53] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:53,970 [DEBUG] VLM: a man in a dark room with a blue light on his face (195ms)
+2026-07-26 02:31:54,151 [DEBUG] VLM: a black and white photo of the moon in the night sky (179ms)
+2026-07-26 02:31:54,151 [INFO] Frame #160: 2 objets, 415ms
+2026-07-26 02:31:54,151 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:54] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:54,665 [DEBUG] VLM: a man standing in front of a blue light (161ms)
+2026-07-26 02:31:54,850 [DEBUG] VLM: a black and white photo of the moon in the night sky (185ms)
+2026-07-26 02:31:54,851 [INFO] Frame #161: 2 objets, 384ms
+2026-07-26 02:31:54,851 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:54] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:55,084 [DEBUG] VLM: a man in a dark room with a laptop and headphones (186ms)
+2026-07-26 02:31:55,086 [INFO] Frame #162: 1 objets, 226ms
+2026-07-26 02:31:55,086 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:55] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:55,646 [DEBUG] VLM: a man standing in front of a blue light (201ms)
+2026-07-26 02:31:55,648 [INFO] Frame #163: 1 objets, 240ms
+2026-07-26 02:31:55,648 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:55] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:55,890 [DEBUG] VLM: a man standing in front of a blue light (196ms)
+2026-07-26 02:31:55,891 [INFO] Frame #164: 1 objets, 236ms
+2026-07-26 02:31:55,892 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:55] "POST /detect HTTP/1.1" 200 -
+2026-07-26 02:31:56,455 [DEBUG] VLM: a man in a dark room with a blue light on his face (205ms)
+2026-07-26 02:31:56,455 [INFO] Frame #165: 1 objets, 248ms
+2026-07-26 02:31:56,455 [INFO] 127.0.0.1 - - [26/Jul/2026 02:31:56] "POST /detect HTTP/1.1" 200 -

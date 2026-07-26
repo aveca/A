@@ -1,0 +1,2596 @@
+{
+  "session": {
+    "start_time": "2026-07-26T02:27:35.769460",
+    "duration_seconds": 254.7,
+    "config": {
+      "model": "YOLOv8m",
+      "device": "cuda:0",
+      "vlm": "BLIP",
+      "tensorrt": true
+    }
+  },
+  "stats": {
+    "frames_processed": 150,
+    "total_detections": 146,
+    "vlm_calls": 143,
+    "corrections_count": 1,
+    "avg_latency_ms": 217.4,
+    "max_latency_ms": 677.6,
+    "min_latency_ms": 35.8
+  },
+  "corrections": [
+    {
+      "from": "Ceci",
+      "to": "Cracker.",
+      "from_en": "Ceci",
+      "timestamp": 1785047461.2362368
+    }
+  ],
+  "vlm_descriptions": [
+    {
+      "caption": "a man in a black shirt with a blue light on his face",
+      "latency_ms": 191.0,
+      "timestamp": 1785047494.2183347
+    },
+    {
+      "caption": "a man in a dark room with a blue light on his face",
+      "latency_ms": 190.7,
+      "timestamp": 1785047494.5023222
+    },
+    {
+      "caption": "a man in a dark room with a blue light on his face",
+      "latency_ms": 187.3,
+      "timestamp": 1785047494.765431
+    },
+    {
+      "caption": "a man in a dark room with a blue light on his face",
+      "latency_ms": 192.1,
+      "timestamp": 1785047495.0513263
+    },
+    {
+      "caption": "a man in a black shirt is holding a cell phone",
+      "latency_ms": 186.6,
+      "timestamp": 1785047495.309543
+    },
+    {
+      "caption": "a man in a black shirt holding a cell phone",
+      "latency_ms": 155.5,
+      "timestamp": 1785047495.5591266
+    },
+    {
+      "caption": "a man in a black shirt is holding a blue light in his hand",
+      "latency_ms": 205.7,
+      "timestamp": 1785047495.8788874
+    },
+    {
+      "caption": "a man in a black shirt is holding a cell phone",
+      "latency_ms": 169.2,
+      "timestamp": 1785047496.0963705
+    },
+    {
+      "caption": "a black cat in the dark with a blue light on it ' s face",
+      "latency_ms": 217.9,
+      "timestamp": 1785047496.674127
+    },
+    {
+      "caption": "a black cat sitting on top of a table",
+      "latency_ms": 159.1,
+      "timestamp": 1785047497.656964
+    },
+    {
+      "caption": "a person holding a piece of paper in their hand",
+      "latency_ms": 158.7,
+      "timestamp": 1785047498.175708
+    },
+    {
+      "caption": "a person holding a piece of food in their hand",
+      "latency_ms": 157.8,
+      "timestamp": 1785047498.3798387
+    },
+    {
+      "caption": "a person holding a piece of food in their hand",
+      "latency_ms": 165.0,
+      "timestamp": 1785047498.90214
+    },
+    {
+      "caption": "a person holding a piece of food in their hand",
+      "latency_ms": 154.5,
+      "timestamp": 1785047499.1603847
+    },
+    {
+      "caption": "a person holding a piece of bread in their hand",
+      "latency_ms": 193.0,
+      "timestamp": 1785047499.4554286
+    },
+    {
+      "caption": "a person holding a piece of food in their hand",
+      "latency_ms": 170.8,
+      "timestamp": 1785047499.6809564
+    },
+    {
+      "caption": "a person holding a piece of bread in their hand",
+      "latency_ms": 175.2,
+      "timestamp": 1785047499.9831553
+    },
+    {
+      "caption": "a person holding a piece of food in their hand",
+      "latency_ms": 170.8,
+      "timestamp": 1785047500.20257
+    },
+    {
+      "caption": "a man in a dark room with a blue light on his face",
+      "latency_ms": 194.4,
+      "timestamp": 1785047500.7542686
+    },
+    {
+      "caption": "a man standing in front of a blue light",
+      "latency_ms": 190.7,
+      "timestamp": 1785047501.018637
+    },
+    {
+      "caption": "a man standing in front of a blue light",
+      "latency_ms": 161.5,
+      "timestamp": 1785047501.27365
+    },
+    {
+      "caption": "a man in a dark room with a blue light on the wall",
+      "latency_ms": 193.0,
+      "timestamp": 1785047501.5733364
+    },
+    {
+      "caption": "a man sitting in front of a blue light",
+      "latency_ms": 158.7,
+      "timestamp": 1785047501.792184
+    },
+    {
+      "caption": "a man sitting in front of a blue light",
+      "latency_ms": 159.1,
+      "timestamp": 1785047502.0964127
+    },
+    {
+      "caption": "a man standing in front of a blue light",
+      "latency_ms": 156.3,
+      "timestamp": 1785047502.298765
+    },
+    {
+      "caption": "a man standing in front of a blue light",
+      "latency_ms": 157.9,
+      "timestamp": 1785047502.8141203
+    },
+    {
+      "caption": "a man in a dark room with headphones on",
+      "latency_ms": 187.6,
+      "timestamp": 1785047503.111846
+    },
+    {
+      "caption": "a man in a dark room with headphones on",
+      "latency_ms": 159.7,
+      "timestamp": 1785047503.3331585
+    },
+    {
+      "caption": "a man in a dark room with a blue light",
+      "latency_ms": 195.3,
+      "timestamp": 1785047503.672266
+    },
+    {
+      "caption": "a man sitting in front of a computer",
+      "latency_ms": 158.6,
+      "timestamp": 1785047503.8788908
+    },
+    {
+      "caption": "a man sitting in front of a laptop computer",
+      "latency_ms": 160.7,
+      "timestamp": 1785047504.390084
+    },
+    {
+      "caption": "a man in a dark room with a blue light on the wall",
+      "latency_ms": 194.4,
+      "timestamp": 1785047504.6769993
+    },
+    {
+      "caption": "a man in a dark room with a blue light on his face",
+      "latency_ms": 201.4,
+      "timestamp": 1785047504.9522252
+    },
+    {
+      "caption": "a man in a dark room with a blue light on his face",
+      "latency_ms": 192.2,
+      "timestamp": 1785047505.2236722
+    },
+    {
+      "caption": "a man standing in front of a blue light",
+      "latency_ms": 156.9,
+      "timestamp": 1785047505.4730437
+    },
+    {
+      "caption": "a man in a dark room with a blue light on his face",
+      "latency_ms": 196.3,
+      "timestamp": 1785047505.7785783
+    },
+    {
+      "caption": "a man in a dark room with a blue light on his face",
+      "latency_ms": 195.4,
+      "timestamp": 1785047506.0256703
+    },
+    {
+      "caption": "a man in a dark room with a blue light on his face",
+      "latency_ms": 195.3,
+      "timestamp": 1785047506.5839024
+    },
+    {
+      "caption": "a man in a dark room with a blue light on his face",
+      "latency_ms": 191.5,
+      "timestamp": 1785047506.828985
+    },
+    {
+      "caption": "a man sitting in front of a laptop computer",
+      "latency_ms": 143.4,
+      "timestamp": 1785047507.0815327
+    },
+    {
+      "caption": "a man in a dark room with a blue light on his face",
+      "latency_ms": 190.9,
+      "timestamp": 1785047507.3821554
+    },
+    {
+      "caption": "a man in a dark room playing a guitar",
+      "latency_ms": 179.8,
+      "timestamp": 1785047507.6092777
+    },
+    {
+      "caption": "a man sitting in front of a laptop computer",
+      "latency_ms": 165.9,
+      "timestamp": 1785047508.131194
+    },
+    {
+      "caption": "a man in a dark room with a laptop and headphones",
+      "latency_ms": 203.2,
+      "timestamp": 1785047508.4234765
+    },
+    {
+      "caption": "a man in a dark room playing a guitar",
+      "latency_ms": 162.7,
+      "timestamp": 1785047508.6474986
+    },
+    {
+      "caption": "a man in a dark room with a laptop and headphones",
+      "latency_ms": 205.4,
+      "timestamp": 1785047508.9802482
+    },
+    {
+      "caption": "a man in a dark room with headphones on",
+      "latency_ms": 183.1,
+      "timestamp": 1785047509.2094924
+    },
+    {
+      "caption": "a man in a dark room with headphones on",
+      "latency_ms": 179.2,
+      "timestamp": 1785047509.7478888
+    },
+    {
+      "caption": "a man in a dark room with a laptop and headphones",
+      "latency_ms": 195.7,
+      "timestamp": 1785047510.0289583
+    },
+    {
+      "caption": "a man in a dark room with headphones on",
+      "latency_ms": 155.6,
+      "timestamp": 1785047510.2576675
+    }
+  ],
+  "detection_log": [
+    {
+      "frame": 45,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.903,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047478.2243495
+    },
+    {
+      "frame": 46,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.914,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047478.5071526
+    },
+    {
+      "frame": 47,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.911,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047478.78623
+    },
+    {
+      "frame": 48,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.897,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047479.0560303
+    },
+    {
+      "frame": 49,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.916,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047479.311646
+    },
+    {
+      "frame": 50,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.91,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047479.6150558
+    },
+    {
+      "frame": 51,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.888,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047479.8713138
+    },
+    {
+      "frame": 52,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.877,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047480.2219923
+    },
+    {
+      "frame": 53,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.873,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047480.4914136
+    },
+    {
+      "frame": 54,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.825,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047480.5798764
+    },
+    {
+      "frame": 55,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.869,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047481.0521538
+    },
+    {
+      "frame": 56,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.859,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047481.3091192
+    },
+    {
+      "frame": 57,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.871,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047481.870181
+    },
+    {
+      "frame": 58,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.887,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047482.1260867
+    },
+    {
+      "frame": 59,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.895,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047482.7052388
+    },
+    {
+      "frame": 60,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.909,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047482.9733527
+    },
+    {
+      "frame": 61,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.903,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047483.536103
+    },
+    {
+      "frame": 62,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.892,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047483.7924736
+    },
+    {
+      "frame": 63,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.895,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047484.0884979
+    },
+    {
+      "frame": 64,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.876,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047484.3414588
+    },
+    {
+      "frame": 65,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.931,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047484.6414905
+    },
+    {
+      "frame": 66,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.929,
+          "track_id": 1
+        },
+        {
+          "class": "personne",
+          "confidence": 0.354,
+          "track_id": 6
+        }
+      ],
+      "timestamp": 1785047485.0850034
+    },
+    {
+      "frame": 67,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.894,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047485.3416228
+    },
+    {
+      "frame": 68,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.891,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047485.8904238
+    },
+    {
+      "frame": 69,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.907,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047486.1656518
+    },
+    {
+      "frame": 70,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.898,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047486.4482057
+    },
+    {
+      "frame": 71,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.882,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047486.7113593
+    },
+    {
+      "frame": 72,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.912,
+          "track_id": 1
+        },
+        {
+          "class": "personne",
+          "confidence": 0.456,
+          "track_id": 6
+        }
+      ],
+      "timestamp": 1785047487.140248
+    },
+    {
+      "frame": 73,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.843,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047487.379594
+    },
+    {
+      "frame": 74,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.769,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047487.9250066
+    },
+    {
+      "frame": 75,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.768,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047488.152074
+    },
+    {
+      "frame": 76,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.725,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047488.41782
+    },
+    {
+      "frame": 77,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.681,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047488.6544995
+    },
+    {
+      "frame": 78,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.621,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047488.9176598
+    },
+    {
+      "frame": 79,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.774,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047489.1526768
+    },
+    {
+      "frame": 80,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.76,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047489.423382
+    },
+    {
+      "frame": 81,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.716,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047489.666856
+    },
+    {
+      "frame": 82,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.629,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047489.9271872
+    },
+    {
+      "frame": 83,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.765,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047490.2228103
+    },
+    {
+      "frame": 84,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.743,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047490.426442
+    },
+    {
+      "frame": 85,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.716,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047490.7728307
+    },
+    {
+      "frame": 86,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.805,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047490.9596202
+    },
+    {
+      "frame": 87,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.775,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047491.5036178
+    },
+    {
+      "frame": 88,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.771,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047491.7309895
+    },
+    {
+      "frame": 89,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.777,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047492.057253
+    },
+    {
+      "frame": 90,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.773,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047492.2612786
+    },
+    {
+      "frame": 91,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.752,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047492.7914565
+    },
+    {
+      "frame": 92,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.612,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047493.032974
+    },
+    {
+      "frame": 95,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.459,
+          "track_id": null
+        }
+      ],
+      "timestamp": 1785047493.6700528
+    },
+    {
+      "frame": 96,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.563,
+          "track_id": 7
+        }
+      ],
+      "timestamp": 1785047493.9544728
+    },
+    {
+      "frame": 97,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.498,
+          "track_id": 7
+        }
+      ],
+      "timestamp": 1785047494.2184558
+    },
+    {
+      "frame": 98,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.353,
+          "track_id": 7
+        }
+      ],
+      "timestamp": 1785047494.5024507
+    },
+    {
+      "frame": 99,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.543,
+          "track_id": 7
+        }
+      ],
+      "timestamp": 1785047494.765561
+    },
+    {
+      "frame": 100,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.495,
+          "track_id": 7
+        }
+      ],
+      "timestamp": 1785047495.0514548
+    },
+    {
+      "frame": 101,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.567,
+          "track_id": 7
+        }
+      ],
+      "timestamp": 1785047495.3096893
+    },
+    {
+      "frame": 102,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.443,
+          "track_id": 7
+        }
+      ],
+      "timestamp": 1785047495.5592742
+    },
+    {
+      "frame": 103,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.357,
+          "track_id": 7
+        }
+      ],
+      "timestamp": 1785047495.8790207
+    },
+    {
+      "frame": 104,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.501,
+          "track_id": 7
+        }
+      ],
+      "timestamp": 1785047496.0965006
+    },
+    {
+      "frame": 105,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.493,
+          "track_id": 7
+        }
+      ],
+      "timestamp": 1785047496.674245
+    },
+    {
+      "frame": 109,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.38,
+          "track_id": 7
+        }
+      ],
+      "timestamp": 1785047497.6571066
+    },
+    {
+      "frame": 111,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.461,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047498.1759238
+    },
+    {
+      "frame": 112,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.516,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047498.3800564
+    },
+    {
+      "frame": 113,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.55,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047498.9023664
+    },
+    {
+      "frame": 114,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.56,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047499.1606088
+    },
+    {
+      "frame": 115,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.618,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047499.455652
+    },
+    {
+      "frame": 116,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.533,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047499.6811981
+    },
+    {
+      "frame": 117,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.537,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047499.9833806
+    },
+    {
+      "frame": 118,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.637,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047500.2027946
+    },
+    {
+      "frame": 119,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.393,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047500.7544847
+    },
+    {
+      "frame": 120,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.609,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047501.018852
+    },
+    {
+      "frame": 121,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.65,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047501.273863
+    },
+    {
+      "frame": 122,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.609,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047501.5735683
+    },
+    {
+      "frame": 123,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.735,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047501.7924044
+    },
+    {
+      "frame": 124,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.781,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047502.0966372
+    },
+    {
+      "frame": 125,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.824,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047502.2989883
+    },
+    {
+      "frame": 126,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.78,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047502.8143363
+    },
+    {
+      "frame": 127,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.849,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047503.1120677
+    },
+    {
+      "frame": 128,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.817,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047503.3334048
+    },
+    {
+      "frame": 129,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.868,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047503.672489
+    },
+    {
+      "frame": 130,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.84,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047503.8791158
+    },
+    {
+      "frame": 131,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.831,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047504.3903248
+    },
+    {
+      "frame": 132,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.78,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047504.677241
+    },
+    {
+      "frame": 133,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.739,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047504.9524436
+    },
+    {
+      "frame": 134,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.894,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047505.223935
+    },
+    {
+      "frame": 135,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.894,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047505.4732852
+    },
+    {
+      "frame": 136,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.862,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047505.7788281
+    },
+    {
+      "frame": 137,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.858,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047506.0259044
+    },
+    {
+      "frame": 138,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.855,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047506.5841274
+    },
+    {
+      "frame": 139,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.806,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047506.8292012
+    },
+    {
+      "frame": 140,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.828,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047507.0817473
+    },
+    {
+      "frame": 141,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.885,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047507.3823788
+    },
+    {
+      "frame": 142,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.839,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047507.609522
+    },
+    {
+      "frame": 143,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.883,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047508.1314297
+    },
+    {
+      "frame": 144,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.897,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047508.423708
+    },
+    {
+      "frame": 145,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.896,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047508.6477654
+    },
+    {
+      "frame": 146,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.905,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047508.980521
+    },
+    {
+      "frame": 147,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.87,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047509.2097147
+    },
+    {
+      "frame": 148,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.856,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047509.748154
+    },
+    {
+      "frame": 149,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.854,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047510.0291805
+    },
+    {
+      "frame": 150,
+      "objects": [
+        {
+          "class": "personne",
+          "confidence": 0.831,
+          "track_id": 1
+        }
+      ],
+      "timestamp": 1785047510.257888
+    }
+  ],
+  "performance": [
+    {
+      "frame": 1,
+      "latency_ms": 677.6,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047461.9608486
+    },
+    {
+      "frame": 2,
+      "latency_ms": 235.0,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047462.2189531
+    },
+    {
+      "frame": 3,
+      "latency_ms": 225.0,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047462.7659667
+    },
+    {
+      "frame": 4,
+      "latency_ms": 194.2,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047462.984814
+    },
+    {
+      "frame": 5,
+      "latency_ms": 196.4,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047463.2828002
+    },
+    {
+      "frame": 6,
+      "latency_ms": 230.9,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047463.5364928
+    },
+    {
+      "frame": 7,
+      "latency_ms": 229.0,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047463.8333938
+    },
+    {
+      "frame": 8,
+      "latency_ms": 221.3,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047464.074014
+    },
+    {
+      "frame": 9,
+      "latency_ms": 217.5,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047464.3675148
+    },
+    {
+      "frame": 10,
+      "latency_ms": 224.2,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047464.6078928
+    },
+    {
+      "frame": 11,
+      "latency_ms": 189.1,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047464.870077
+    },
+    {
+      "frame": 12,
+      "latency_ms": 246.5,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047465.1782942
+    },
+    {
+      "frame": 13,
+      "latency_ms": 219.8,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047465.4058776
+    },
+    {
+      "frame": 14,
+      "latency_ms": 217.7,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047465.9467082
+    },
+    {
+      "frame": 15,
+      "latency_ms": 229.8,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047466.2074022
+    },
+    {
+      "frame": 16,
+      "latency_ms": 201.3,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047466.4603689
+    },
+    {
+      "frame": 17,
+      "latency_ms": 238.6,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047466.7631967
+    },
+    {
+      "frame": 18,
+      "latency_ms": 237.7,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047467.0086174
+    },
+    {
+      "frame": 19,
+      "latency_ms": 218.7,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047467.5414267
+    },
+    {
+      "frame": 20,
+      "latency_ms": 196.5,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047467.7845666
+    },
+    {
+      "frame": 21,
+      "latency_ms": 243.1,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047468.097898
+    },
+    {
+      "frame": 22,
+      "latency_ms": 236.0,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047468.3421493
+    },
+    {
+      "frame": 23,
+      "latency_ms": 235.2,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047468.8958282
+    },
+    {
+      "frame": 24,
+      "latency_ms": 205.5,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": false,
+      "timestamp": 1785047469.1333437
+    },
+    {
+      "frame": 25,
+      "latency_ms": 234.6,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": false,
+      "timestamp": 1785047469.443531
+    },
+    {
+      "frame": 26,
+      "latency_ms": 195.5,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": false,
+      "timestamp": 1785047469.6478581
+    },
+    {
+      "frame": 27,
+      "latency_ms": 224.1,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": false,
+      "timestamp": 1785047470.1821477
+    },
+    {
+      "frame": 28,
+      "latency_ms": 202.7,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": false,
+      "timestamp": 1785047470.4250007
+    },
+    {
+      "frame": 29,
+      "latency_ms": 238.0,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047470.7429092
+    },
+    {
+      "frame": 30,
+      "latency_ms": 252.5,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047473.0087967
+    },
+    {
+      "frame": 31,
+      "latency_ms": 236.3,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047473.5549154
+    },
+    {
+      "frame": 32,
+      "latency_ms": 232.8,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047473.8154922
+    },
+    {
+      "frame": 33,
+      "latency_ms": 236.8,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047474.1028318
+    },
+    {
+      "frame": 34,
+      "latency_ms": 255.1,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047474.3867702
+    },
+    {
+      "frame": 35,
+      "latency_ms": 240.2,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047474.6515028
+    },
+    {
+      "frame": 36,
+      "latency_ms": 234.9,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047474.944989
+    },
+    {
+      "frame": 37,
+      "latency_ms": 234.2,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047475.196095
+    },
+    {
+      "frame": 38,
+      "latency_ms": 241.2,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047475.500857
+    },
+    {
+      "frame": 39,
+      "latency_ms": 254.9,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047475.7630386
+    },
+    {
+      "frame": 40,
+      "latency_ms": 250.1,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047476.3252997
+    },
+    {
+      "frame": 41,
+      "latency_ms": 253.0,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047476.5857077
+    },
+    {
+      "frame": 42,
+      "latency_ms": 251.1,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047477.1477423
+    },
+    {
+      "frame": 43,
+      "latency_ms": 245.5,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047477.4019845
+    },
+    {
+      "frame": 44,
+      "latency_ms": 234.3,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047477.9496033
+    },
+    {
+      "frame": 45,
+      "latency_ms": 243.9,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047478.224348
+    },
+    {
+      "frame": 46,
+      "latency_ms": 246.1,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047478.5071514
+    },
+    {
+      "frame": 47,
+      "latency_ms": 245.0,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047478.7862284
+    },
+    {
+      "frame": 48,
+      "latency_ms": 233.0,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047479.0560288
+    },
+    {
+      "frame": 49,
+      "latency_ms": 205.7,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047479.3116443
+    },
+    {
+      "frame": 50,
+      "latency_ms": 242.7,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047479.6150546
+    },
+    {
+      "frame": 51,
+      "latency_ms": 249.6,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047479.8713124
+    },
+    {
+      "frame": 52,
+      "latency_ms": 40.9,
+      "detections": 1,
+      "vlm_active": false,
+      "tracking_active": true,
+      "timestamp": 1785047480.2219908
+    },
+    {
+      "frame": 53,
+      "latency_ms": 42.9,
+      "detections": 1,
+      "vlm_active": false,
+      "tracking_active": true,
+      "timestamp": 1785047480.4914114
+    },
+    {
+      "frame": 54,
+      "latency_ms": 38.6,
+      "detections": 1,
+      "vlm_active": false,
+      "tracking_active": true,
+      "timestamp": 1785047480.5798745
+    },
+    {
+      "frame": 55,
+      "latency_ms": 243.3,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047481.0521524
+    },
+    {
+      "frame": 56,
+      "latency_ms": 249.8,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047481.3091178
+    },
+    {
+      "frame": 57,
+      "latency_ms": 249.8,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047481.8701797
+    },
+    {
+      "frame": 58,
+      "latency_ms": 247.6,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047482.1260853
+    },
+    {
+      "frame": 59,
+      "latency_ms": 259.5,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047482.7052367
+    },
+    {
+      "frame": 60,
+      "latency_ms": 257.3,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047482.9733515
+    },
+    {
+      "frame": 61,
+      "latency_ms": 242.7,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047483.5361013
+    },
+    {
+      "frame": 62,
+      "latency_ms": 231.7,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047483.7924724
+    },
+    {
+      "frame": 63,
+      "latency_ms": 231.5,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047484.0884964
+    },
+    {
+      "frame": 64,
+      "latency_ms": 234.0,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047484.3414571
+    },
+    {
+      "frame": 65,
+      "latency_ms": 236.6,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047484.6414886
+    },
+    {
+      "frame": 66,
+      "latency_ms": 428.5,
+      "detections": 2,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047485.0850015
+    },
+    {
+      "frame": 67,
+      "latency_ms": 249.5,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047485.3416214
+    },
+    {
+      "frame": 68,
+      "latency_ms": 228.6,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047485.8904226
+    },
+    {
+      "frame": 69,
+      "latency_ms": 233.4,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047486.1656497
+    },
+    {
+      "frame": 70,
+      "latency_ms": 234.0,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047486.4482043
+    },
+    {
+      "frame": 71,
+      "latency_ms": 228.8,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047486.711358
+    },
+    {
+      "frame": 72,
+      "latency_ms": 375.2,
+      "detections": 2,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047487.1402466
+    },
+    {
+      "frame": 73,
+      "latency_ms": 231.9,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047487.3795924
+    },
+    {
+      "frame": 74,
+      "latency_ms": 222.1,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047487.925005
+    },
+    {
+      "frame": 75,
+      "latency_ms": 198.8,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047488.1520724
+    },
+    {
+      "frame": 76,
+      "latency_ms": 181.1,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047488.4178185
+    },
+    {
+      "frame": 77,
+      "latency_ms": 184.5,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047488.654497
+    },
+    {
+      "frame": 78,
+      "latency_ms": 182.3,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047488.9176576
+    },
+    {
+      "frame": 79,
+      "latency_ms": 182.7,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047489.152675
+    },
+    {
+      "frame": 80,
+      "latency_ms": 185.8,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047489.4233809
+    },
+    {
+      "frame": 81,
+      "latency_ms": 192.9,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047489.6668546
+    },
+    {
+      "frame": 82,
+      "latency_ms": 187.6,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047489.9271863
+    },
+    {
+      "frame": 83,
+      "latency_ms": 231.9,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047490.222809
+    },
+    {
+      "frame": 84,
+      "latency_ms": 184.1,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047490.4264407
+    },
+    {
+      "frame": 85,
+      "latency_ms": 229.5,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047490.7728295
+    },
+    {
+      "frame": 86,
+      "latency_ms": 179.2,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047490.959619
+    },
+    {
+      "frame": 87,
+      "latency_ms": 235.0,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047491.5036166
+    },
+    {
+      "frame": 88,
+      "latency_ms": 195.8,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047491.730988
+    },
+    {
+      "frame": 89,
+      "latency_ms": 238.5,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047492.0572517
+    },
+    {
+      "frame": 90,
+      "latency_ms": 196.3,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047492.2612774
+    },
+    {
+      "frame": 91,
+      "latency_ms": 219.4,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047492.791455
+    },
+    {
+      "frame": 92,
+      "latency_ms": 192.6,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047493.0329728
+    },
+    {
+      "frame": 93,
+      "latency_ms": 37.4,
+      "detections": 0,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047493.1451263
+    },
+    {
+      "frame": 94,
+      "latency_ms": 37.0,
+      "detections": 0,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047493.3795812
+    },
+    {
+      "frame": 95,
+      "latency_ms": 201.6,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047493.6700516
+    },
+    {
+      "frame": 96,
+      "latency_ms": 249.1,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047493.9544713
+    },
+    {
+      "frame": 97,
+      "latency_ms": 229.1,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047494.2184546
+    },
+    {
+      "frame": 98,
+      "latency_ms": 229.0,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047494.5024495
+    },
+    {
+      "frame": 99,
+      "latency_ms": 227.1,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047494.76556
+    },
+    {
+      "frame": 100,
+      "latency_ms": 230.9,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047495.0514534
+    },
+    {
+      "frame": 101,
+      "latency_ms": 225.2,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047495.3096883
+    },
+    {
+      "frame": 102,
+      "latency_ms": 193.7,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047495.559273
+    },
+    {
+      "frame": 103,
+      "latency_ms": 246.0,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047495.8790195
+    },
+    {
+      "frame": 104,
+      "latency_ms": 208.9,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047496.0964994
+    },
+    {
+      "frame": 105,
+      "latency_ms": 256.8,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047496.674244
+    },
+    {
+      "frame": 106,
+      "latency_ms": 36.2,
+      "detections": 0,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047496.7178614
+    },
+    {
+      "frame": 107,
+      "latency_ms": 35.8,
+      "detections": 0,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047497.1337206
+    },
+    {
+      "frame": 108,
+      "latency_ms": 36.6,
+      "detections": 0,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047497.3994453
+    },
+    {
+      "frame": 109,
+      "latency_ms": 199.0,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047497.6571038
+    },
+    {
+      "frame": 110,
+      "latency_ms": 38.3,
+      "detections": 0,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047497.7610998
+    },
+    {
+      "frame": 111,
+      "latency_ms": 200.0,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047498.1759224
+    },
+    {
+      "frame": 112,
+      "latency_ms": 196.9,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047498.3800547
+    },
+    {
+      "frame": 113,
+      "latency_ms": 202.6,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047498.902365
+    },
+    {
+      "frame": 114,
+      "latency_ms": 193.1,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047499.1606073
+    },
+    {
+      "frame": 115,
+      "latency_ms": 236.9,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047499.4556508
+    },
+    {
+      "frame": 116,
+      "latency_ms": 211.4,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047499.6811967
+    },
+    {
+      "frame": 117,
+      "latency_ms": 214.8,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047499.9833791
+    },
+    {
+      "frame": 118,
+      "latency_ms": 211.0,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047500.2027931
+    },
+    {
+      "frame": 119,
+      "latency_ms": 233.5,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047500.7544835
+    },
+    {
+      "frame": 120,
+      "latency_ms": 230.1,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047501.0188508
+    },
+    {
+      "frame": 121,
+      "latency_ms": 200.5,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047501.273862
+    },
+    {
+      "frame": 122,
+      "latency_ms": 233.8,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047501.573567
+    },
+    {
+      "frame": 123,
+      "latency_ms": 198.6,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047501.792403
+    },
+    {
+      "frame": 124,
+      "latency_ms": 204.4,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047502.0966358
+    },
+    {
+      "frame": 125,
+      "latency_ms": 194.3,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047502.298987
+    },
+    {
+      "frame": 126,
+      "latency_ms": 196.2,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047502.8143346
+    },
+    {
+      "frame": 127,
+      "latency_ms": 227.8,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047503.1120663
+    },
+    {
+      "frame": 128,
+      "latency_ms": 199.1,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047503.3334033
+    },
+    {
+      "frame": 129,
+      "latency_ms": 236.6,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047503.672486
+    },
+    {
+      "frame": 130,
+      "latency_ms": 199.2,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047503.8791144
+    },
+    {
+      "frame": 131,
+      "latency_ms": 200.5,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047504.3903232
+    },
+    {
+      "frame": 132,
+      "latency_ms": 234.7,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047504.677239
+    },
+    {
+      "frame": 133,
+      "latency_ms": 242.6,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047504.9524422
+    },
+    {
+      "frame": 134,
+      "latency_ms": 231.5,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047505.2239332
+    },
+    {
+      "frame": 135,
+      "latency_ms": 197.0,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047505.4732835
+    },
+    {
+      "frame": 136,
+      "latency_ms": 236.3,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047505.778826
+    },
+    {
+      "frame": 137,
+      "latency_ms": 237.1,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047506.0259027
+    },
+    {
+      "frame": 138,
+      "latency_ms": 238.0,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047506.5841262
+    },
+    {
+      "frame": 139,
+      "latency_ms": 230.3,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047506.8291998
+    },
+    {
+      "frame": 140,
+      "latency_ms": 182.6,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047507.0817459
+    },
+    {
+      "frame": 141,
+      "latency_ms": 230.4,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047507.3823774
+    },
+    {
+      "frame": 142,
+      "latency_ms": 219.0,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047507.6095204
+    },
+    {
+      "frame": 143,
+      "latency_ms": 205.4,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047508.131428
+    },
+    {
+      "frame": 144,
+      "latency_ms": 243.8,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047508.4237065
+    },
+    {
+      "frame": 145,
+      "latency_ms": 205.0,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047508.647764
+    },
+    {
+      "frame": 146,
+      "latency_ms": 245.9,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047508.980519
+    },
+    {
+      "frame": 147,
+      "latency_ms": 221.6,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047509.2097135
+    },
+    {
+      "frame": 148,
+      "latency_ms": 219.8,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047509.7481515
+    },
+    {
+      "frame": 149,
+      "latency_ms": 233.7,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047510.0291777
+    },
+    {
+      "frame": 150,
+      "latency_ms": 194.8,
+      "detections": 1,
+      "vlm_active": true,
+      "tracking_active": true,
+      "timestamp": 1785047510.2578866
+    }
+  ],
+  "errors": []
+}

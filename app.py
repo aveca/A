@@ -132,6 +132,8 @@ COCO_CLASSES_FR = {
 corrections = []
 corrections_lock = threading.Lock()
 custom_model = None
+vlm_frame_counter = 0
+VLM_EVERY_N_FRAMES = 3
 
 
 def get_dominant_color(crop):
@@ -216,13 +218,14 @@ def detect():
     try:
         if use_tracking:
             results = active_model.track(
-                frame, conf=0.35, verbose=False,
+                frame, conf=0.25, verbose=False,
                 device='cuda:0' if torch.cuda.is_available() else 'cpu',
-                tracker="bytetrack.yaml", persist=True
+                tracker="bytetrack.yaml", persist=True,
+                iou=0.5, classes=None
             )
         else:
             results = active_model(
-                frame, conf=0.35, verbose=False,
+                frame, conf=0.25, verbose=False,
                 device='cuda:0' if torch.cuda.is_available() else 'cpu'
             )
     except Exception as e:
@@ -252,7 +255,11 @@ def detect():
             color_desc = get_dominant_color(crop)
             vlm_desc = None
             vlm_latency = 0
-            if use_vlm and vlm and crop.size > 100:
+
+            global vlm_frame_counter
+            vlm_frame_counter += 1
+            run_vlm = use_vlm and vlm and crop.size > 100 and (vlm_frame_counter % VLM_EVERY_N_FRAMES == 0)
+            if run_vlm:
                 vlm_desc, vlm_latency = get_vlm_description(crop)
 
             track_id = None
@@ -294,7 +301,15 @@ def detect():
         if len(detections) > 0:
             session_log['detection_log'].append({
                 'frame': session_log['frames_processed'],
-                'objects': [{'class': d['class'], 'confidence': d['confidence'], 'track_id': d['track_id']} for d in detections],
+                'objects': [{
+                    'class': d['class'],
+                    'class_en': d['class_en'],
+                    'category': d['category'],
+                    'confidence': d['confidence'],
+                    'color': d['color'],
+                    'track_id': d['track_id'],
+                    'vlm_description': d['vlm_description'],
+                } for d in detections],
                 'timestamp': time.time(),
             })
 

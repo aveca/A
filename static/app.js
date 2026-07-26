@@ -127,17 +127,25 @@ function updateSessionStats() {
 function parseVoiceCorrection(text) {
   const t = text.toLowerCase().trim();
   const patterns = [
-    /(?:ce n'?est pas|c'?est pas)\s+(?:un[e]?\s+)?(.+?)(?:,\s*)?(?:c'?est|mais c'?est|en fait c'?est|plutôt)\s+(?:un[e]?\s+)?(.+)/i,
-    /(.+?)\s+(?:c'?est|est)\s+(?:en fait |plutôt )?(?:un[e]?\s+)?(.+)/i,
+    /(?:ce n'?est pas|c'?est pas)\s+(?:un[e]?\s+)?(.+?)(?:,\s*)?(?:c'?est|mais c'?est|en fait c'?est|plutôt|plutot)\s+(?:un[e]?\s+)?(.+)/i,
+    /(.+?)\s+(?:c'?est|est)\s+(?:en fait |plutôt |plutot )?(?:un[e]?\s+)?(.+)/i,
     /(?:remplacer?|corriger?|changer?)\s+(.+?)\s+(?:par|en|pour)\s+(.+)/i,
+    /(?:au lieu de|pas)\s+(.+?)\s+(?:mettre?|c'?est|utiliser?|prendre?)\s+(.+)/i,
+    /(.+?)\s+(?:est|sont)\s+(?:en fait |plutôt |plutot |en réalité )?(?:un[e]?\s+)?(.+)/i,
+    /(?:non|nan|c'est pas)\s+(.+?)\s+(?:c'?est|mais)\s+(.+)/i,
+    /(.+?)\s+(?:non|nan)\s*,?\s*(?:c'?est|mais)\s+(.+)/i,
   ];
   for (const pat of patterns) {
     const m = t.match(pat);
     if (m && m[1] && m[2]) {
-      return {
-        from: m[1].trim().replace(/^(un|une|le|la|l')\s+/i, '').replace(/^./, c => c.toUpperCase()),
-        to: m[2].trim().replace(/^(un|une|le|la|l')\s+/i, '').replace(/^./, c => c.toUpperCase()),
-      };
+      let from = m[1].trim().replace(/^(un|une|le|la|l'|les|des|du)\s+/i, '');
+      let to = m[2].trim().replace(/^(un|une|le|la|l'|les|des|du)\s+/i, '');
+      if (from.length > 1 && to.length > 1) {
+        return {
+          from: from.charAt(0).toUpperCase() + from.slice(1),
+          to: to.charAt(0).toUpperCase() + to.slice(1),
+        };
+      }
     }
   }
   return null;
