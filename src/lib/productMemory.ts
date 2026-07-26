@@ -8,6 +8,29 @@ import type {
 import { tokenize, jaccard, overlap } from "./keywords";
 import { colorDistance, guessCategory } from "./color";
 
+let productCache: Product[] | null = null;
+let cacheLoading: Promise<Product[]> | null = null;
+
+export async function loadProductCache(): Promise<Product[]> {
+  if (productCache) return productCache;
+  if (cacheLoading) return cacheLoading;
+  cacheLoading = (async () => {
+    const { data, error } = await supabase
+      .from("products")
+      .select("*")
+      .order("updated_at", { ascending: false });
+    if (error) throw error;
+    productCache = (data || []) as Product[];
+    return productCache;
+  })();
+  return cacheLoading;
+}
+
+export function invalidateCache(): void {
+  productCache = null;
+  cacheLoading = null;
+}
+
 function bestName(detection: DetectionResult): { name: string; text: string } {
   const lines = [...detection.textLines].sort((a, b) => b.confidence - a.confidence);
   let name = "";
@@ -39,54 +62,47 @@ function bestName(detection: DetectionResult): { name: string; text: string } {
 export async function findKnownProduct(
   detection: DetectionResult
 ): Promise<RecognitionMatch | null> {
+  const all = await loadProductCache();
+  if (all.length === 0) return null;
+
   const barcode = detection.barcodes[0]?.text;
   if (barcode) {
-    const { data } = await supabase
-      .from("products")
-      .select("*")
-      .eq("barcode", barcode)
-      .maybeSingle();
-    if (data) {
-      return { product: data as Product, method: "barcode", confidence: 1 };
+    const match = all.find((p) => p.barcode === barcode);
+    if (match) {
+      return { product: match, method: "barcode", confidence: 1 };
     }
   }
 
   const text = detection.textLines.map((l) => l.text).join(" ");
   const tokens = tokenize(text);
   if (tokens.length > 0) {
-    const { data } = await supabase.from("products").select("*");
-    if (data && data.length > 0) {
-      let best: { p: Product; score: number } | null = null;
-      for (const p of data as Product[]) {
-        if (!p.keywords || p.keywords.length === 0) continue;
-        const j = jaccard(tokens, p.keywords);
-        const o = overlap(tokens, p.keywords);
-        const score = j * 0.6 + Math.min(1, o / 3) * 0.4;
-        if (score > 0.45 && (!best || score > best.score)) {
-          best = { p, score };
-        }
+    let best: { p: Product; score: number } | null = null;
+    for (const p of all) {
+      if (!p.keywords || p.keywords.length === 0) continue;
+      const j = jaccard(tokens, p.keywords);
+      const o = overlap(tokens, p.keywords);
+      const score = j * 0.6 + Math.min(1, o / 3) * 0.4;
+      if (score > 0.45 && (!best || score > best.score)) {
+        best = { p, score };
       }
-      if (best) {
-        return { product: best.p, method: "ocr", confidence: best.score };
-      }
+    }
+    if (best) {
+      return { product: best.p, method: "ocr", confidence: best.score };
     }
   }
 
   if (detection.colorFingerprint) {
-    const { data } = await supabase.from("products").select("*");
-    if (data && data.length > 0) {
-      let best: { p: Product; score: number } | null = null;
-      for (const p of data as Product[]) {
-        if (!p.color_fingerprint) continue;
-        const dist = colorDistance(detection.colorFingerprint, p.color_fingerprint as ColorFingerprint);
-        const score = 1 - dist;
-        if (score > 0.7 && (!best || score > best.score)) {
-          best = { p, score };
-        }
+    let best: { p: Product; score: number } | null = null;
+    for (const p of all) {
+      if (!p.color_fingerprint) continue;
+      const dist = colorDistance(detection.colorFingerprint, p.color_fingerprint as ColorFingerprint);
+      const score = 1 - dist;
+      if (score > 0.7 && (!best || score > best.score)) {
+        best = { p, score };
       }
-      if (best) {
-        return { product: best.p, method: "shape", confidence: best.score };
-      }
+    }
+    if (best) {
+      return { product: best.p, method: "shape", confidence: best.score };
     }
   }
 
@@ -130,6 +146,7 @@ export async function saveProduct(
         .eq("id", existing.id)
         .select()
         .single();
+      invalidateCache();
       return data as Product;
     }
   }
@@ -151,21 +168,18 @@ export async function saveProduct(
     .select()
     .single();
   if (error) throw error;
+  invalidateCache();
   return data as Product;
 }
 
 export async function listProducts(): Promise<Product[]> {
-  const { data, error } = await supabase
-    .from("products")
-    .select("*")
-    .order("updated_at", { ascending: false });
-  if (error) throw error;
-  return (data || []) as Product[];
+  return loadProductCache();
 }
 
 export async function deleteProduct(id: string): Promise<void> {
   const { error } = await supabase.from("products").delete().eq("id", id);
   if (error) throw error;
+  invalidateCache();
 }
 
 export async function renameProduct(id: string, name: string): Promise<void> {
@@ -175,4 +189,8 @@ export async function renameProduct(id: string, name: string): Promise<void> {
     .update({ name, keywords, updated_at: new Date().toISOString() })
     .eq("id", id);
   if (error) throw error;
+  invalidateCache();
 }
+
+
+export { listProducts, deleteProduct, renameProduct }

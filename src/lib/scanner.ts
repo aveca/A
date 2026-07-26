@@ -1,5 +1,5 @@
 import { BarcodeScanner } from "./barcode";
-import { recognizeText } from "./ocr";
+import { recognizeText, preprocessForOCR, type CropRegion } from "./ocr";
 import { extractPrices } from "./prices";
 import { computeColorFingerprint, guessShape } from "./color";
 import { findKnownProduct, saveProduct } from "./productMemory";
@@ -10,8 +10,9 @@ import type {
   RecognitionMatch,
 } from "../types";
 
-const OCR_INTERVAL_MS = 900;
-const COLOR_INTERVAL_MS = 350;
+const OCR_INTERVAL_MS = 1200;
+const COLOR_INTERVAL_MS = 600;
+const SCAN_REGION_RATIO = { x: 0.1, y: 0.2, w: 0.8, h: 0.6 };
 
 export interface ScannerCallbacks {
   onFrame?: (frame: ScanFrame) => void;
@@ -43,6 +44,7 @@ export class Scanner {
   private frameTimes: number[] = [];
   private knownBarcodes = new Set<string>();
   private stream: MediaStream | null = null;
+  private ocrBusy = false;
 
   public status: ScannerStatus = {
     cameraReady: false,
@@ -65,7 +67,11 @@ export class Scanner {
 
     try {
       this.stream = await navigator.mediaDevices.getUserMedia({
-        video: { facingMode: "environment", width: { ideal: 1280 }, height: { ideal: 720 } },
+        video: {
+          facingMode: { ideal: "environment" },
+          width: { ideal: 1920 },
+          height: { ideal: 1080 },
+        },
         audio: false,
       });
       this.video.srcObject = this.stream;
@@ -100,6 +106,17 @@ export class Scanner {
     this.cb.onStatus?.({ ...this.status });
   }
 
+  private getRegion(): CropRegion {
+    const w = this.canvas.width || this.video.videoWidth || 1280;
+    const h = this.canvas.height || this.video.videoHeight || 720;
+    return {
+      sx: Math.round(w * SCAN_REGION_RATIO.x),
+      sy: Math.round(h * SCAN_REGION_RATIO.y),
+      sw: Math.round(w * SCAN_REGION_RATIO.w),
+      sh: Math.round(h * SCAN_REGION_RATIO.h),
+    };
+  }
+
   private onBarcode(b: DetectedBarcode) {
     this.lastBarcodeAt = performance.now();
     this.status.lastBarcodeAt = this.lastBarcodeAt;
@@ -130,7 +147,8 @@ export class Scanner {
 
       if (now - this.lastColorAt > COLOR_INTERVAL_MS) {
         this.lastColorAt = now;
-        const detection = this.buildDetection("shape", [], [], true);
+        const region = this.getRegion();
+        const detection = this.buildDetection("shape", [], [], true, region);
         const match = await findKnownProduct(detection);
         if (match) {
           this.cb.onMatch?.(match, detection);
@@ -138,13 +156,16 @@ export class Scanner {
         this.cb.onFrame?.({ detection, match, thumbnail: null });
       }
 
-      if (now - this.lastOcrAt > OCR_INTERVAL_MS) {
+      if (now - this.lastOcrAt > OCR_INTERVAL_MS && !this.ocrBusy) {
         this.lastOcrAt = now;
+        this.ocrBusy = true;
         this.status.ocrRunning = true;
         this.emitStatus();
-        this.runFullDetection("ocr");
-        this.status.ocrRunning = false;
-        this.emitStatus();
+        this.runFullDetection("ocr").finally(() => {
+          this.ocrBusy = false;
+          this.status.ocrRunning = false;
+          this.emitStatus();
+        });
       }
     }
 
@@ -155,17 +176,28 @@ export class Scanner {
     method: DetectionResult["method"],
     barcodes: DetectedBarcode[],
     textLines: DetectionResult["textLines"],
-    includeColor: boolean
+    includeColor: boolean,
+    region: CropRegion
   ): DetectionResult {
-    const w = this.canvas.width;
-    const h = this.canvas.height;
     const text = textLines.map((l) => l.text).join(" ");
     const prices = extractPrices(text);
     let colorFingerprint = null;
     let dominantShape: DetectionResult["dominantShape"] = "unknown";
     if (includeColor) {
-      colorFingerprint = computeColorFingerprint(this.ctx, 0, 0, w, h);
-      dominantShape = guessShape(this.ctx, 0, 0, w, h);
+      colorFingerprint = computeColorFingerprint(
+        this.ctx,
+        region.sx,
+        region.sy,
+        region.sw,
+        region.sh
+      );
+      dominantShape = guessShape(
+        this.ctx,
+        region.sx,
+        region.sy,
+        region.sw,
+        region.sh
+      );
     }
     return {
       method,
@@ -187,6 +219,7 @@ export class Scanner {
     const w = this.canvas.width;
     const h = this.canvas.height;
     this.ctx.drawImage(this.video, 0, 0, w, h);
+    const region = this.getRegion();
 
     let barcodes = presetBarcodes;
     if (barcodes.length === 0) {
@@ -196,10 +229,11 @@ export class Scanner {
 
     let textLines = presetText;
     if (textLines.length === 0) {
-      textLines = await recognizeText(this.canvas);
+      const ocrCanvas = preprocessForOCR(this.canvas, region);
+      textLines = await recognizeText(ocrCanvas);
     }
 
-    const detection = this.buildDetection(method, barcodes, textLines, true);
+    const detection = this.buildDetection(method, barcodes, textLines, true, region);
     this.cb.onDetection?.(detection);
 
     const match = await findKnownProduct(detection);
@@ -213,12 +247,23 @@ export class Scanner {
 
   private makeThumbnail(): string | null {
     try {
+      const region = this.getRegion();
       const tw = 160;
-      const th = Math.round((this.canvas.height / this.canvas.width) * tw);
+      const th = Math.round((region.sh / region.sw) * tw);
       const tc = document.createElement("canvas");
       tc.width = tw;
       tc.height = th;
-      tc.getContext("2d")!.drawImage(this.canvas, 0, 0, tw, th);
+      tc.getContext("2d")!.drawImage(
+        this.canvas,
+        region.sx,
+        region.sy,
+        region.sw,
+        region.sh,
+        0,
+        0,
+        tw,
+        th
+      );
       return tc.toDataURL("image/jpeg", 0.6);
     } catch {
       return null;
@@ -230,12 +275,14 @@ export class Scanner {
     const h = this.canvas.height;
     if (w === 0 || h === 0) return;
     this.ctx.drawImage(this.video, 0, 0, w, h);
+    const region = this.getRegion();
     const thumb = this.makeThumbnail();
     let barcodes: DetectedBarcode[] = [];
     const b = await this.barcode.decodeFromCanvas(this.canvas);
     if (b) barcodes = [b];
-    const textLines = await recognizeText(this.canvas);
-    const detection = this.buildDetection("memory", barcodes, textLines, true);
+    const ocrCanvas = preprocessForOCR(this.canvas, region);
+    const textLines = await recognizeText(ocrCanvas);
+    const detection = this.buildDetection("memory", barcodes, textLines, true, region);
     await saveProduct(detection, thumb, nameOverride);
   }
 }
