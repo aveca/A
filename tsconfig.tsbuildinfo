@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/types.ts","./src/vite-env.d.ts","./src/hooks/useScanner.ts","./src/lib/barcode.ts","./src/lib/color.ts","./src/lib/export.ts","./src/lib/keywords.ts","./src/lib/ocr.ts","./src/lib/prices.ts","./src/lib/productMemory.ts","./src/lib/scanner.ts","./src/lib/supabase.ts"],"version":"5.9.3"}
