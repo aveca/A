@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Object Camera Recognition — GPU</title>
+  <title>Object Camera Recognition — GPU Full Pipeline</title>
   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 
 <header>
   <h1>🎯 Object Camera Recognition</h1>
-  <p>YOLOv8 + CUDA — Détection en temps réel + apprentissage vocal</p>
+  <p>YOLOv8 + ByteTrack + Florence-2 VLM — Pipeline complet sur RTX 4060 Ti</p>
 </header>
 
 <main>
@@ -22,20 +22,26 @@
           <canvas id="canvas"></canvas>
           <div id="loading">
             <div class="spinner"></div>
-            <span id="loadingText">Chargement du modèle GPU…</span>
+            <span id="loadingText">Chargement du pipeline GPU…</span>
           </div>
           <div id="badge" class="badge hidden">GPU CUDA</div>
-          <div id="micBadge" class="mic-badge hidden">🎤 En écoute…</div>
+          <div id="micBadge" class="mic-badge hidden">🎤 Écoute…</div>
         </div>
         <div class="controls">
-          <button id="btnStart" class="btn btn-primary">📷 Démarrer la caméra</button>
-          <button id="btnStop" class="btn btn-danger" disabled>⏹ Arrêter</button>
+          <button id="btnStart" class="btn btn-primary">📷 Caméra</button>
+          <button id="btnStop" class="btn btn-danger" disabled>⏹ Stop</button>
           <button id="btnMic" class="btn btn-mic" disabled>🎤 Micro</button>
           <div class="stats">
             <span id="fpsCounter" class="stat">— FPS</span>
             <span id="detCount" class="stat">— objets</span>
             <span id="latency" class="stat">— ms</span>
           </div>
+        </div>
+        <div class="tool-bar">
+          <button id="btnVLM" class="btn btn-tool active" title="Vision Language Model — descriptions détaillées">🧠 VLM ON</button>
+          <button id="btnTrack" class="btn btn-tool active" title="Suivi d'objets entre frames">📍 Track ON</button>
+          <button id="btnFineTune" class="btn btn-tool" disabled title="Capturer un objet pour entraînement">📸 Fine-tune</button>
+          <button id="btnExport" class="btn btn-tool" disabled title="Exporter les détections en CSV">💾 Export CSV</button>
         </div>
         <div class="voice-panel" id="voicePanel">
           <div class="voice-status" id="voiceStatus">🎤 Appuyez sur Micro pour dicter une correction</div>
@@ -53,21 +59,21 @@
         <div id="sceneDesc" class="scene-desc"></div>
         <ul id="objectList"></ul>
         <div class="corrections-section">
-          <h3>📝 Corrections enregistrées <span id="corrCount" class="total-badge">0</span></h3>
+          <h3>📝 Corrections <span id="corrCount" class="total-badge">0</span></h3>
           <ul id="correctionList"></ul>
-          <button id="btnClearCorrections" class="btn btn-small btn-danger">🗑 Effacer tout</button>
+          <button id="btnClearCorrections" class="btn btn-small btn-danger">🗑 Effacer</button>
         </div>
       </div>
     </div>
   </section>
 
   <section class="info">
-    <p>La détection utilise <strong>YOLOv8m</strong> + <strong>CUDA</strong> sur ta <strong>RTX 4060 Ti</strong>. Dictes des corrections vocales pour améliorer la reconnaissance : l'IA se souvient de tes ajouts.</p>
+    <p><strong>YOLOv8m</strong> + <strong>ByteTrack</strong> + <strong>Florence-2 VLM</strong> — GPU <strong>RTX 4060 Ti</strong>. Tout est local, rien n'est envoyé sur internet.</p>
   </section>
 </main>
 
 <footer>
-  <p><a href="https://github.com/aveca/A">aveca/A</a> — GPU Object Detection + Voice Learning</p>
+  <p><a href="https://github.com/aveca/A">aveca/A</a> — Full GPU Pipeline: Detection + Tracking + VLM + Fine-tuning</p>
 </footer>
 
 <script src="/static/app.js"></script>
