@@ -1,9 +1,0 @@
-============================================================
-  Object Camera Recognition — Full GPU Pipeline
-  YOLOv8m + ByteTrack + BLIP VLM + TensorRT
-============================================================
-
-✅ Serveur prêt: http://localhost:5000
-
- * Serving Flask app 'app'
- * Debug mode: off
