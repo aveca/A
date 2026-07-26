@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Object Camera Recognition — GPU Full Pipeline</title>
+  <title>Object Camera Recognition — Full Pipeline GPU</title>
   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 
 <header>
   <h1>🎯 Object Camera Recognition</h1>
-  <p>YOLOv8 + ByteTrack + Florence-2 VLM — Pipeline complet sur RTX 4060 Ti</p>
+  <p>YOLOv8 + ByteTrack + BLIP VLM — Pipeline complet sur RTX 4060 Ti</p>
 </header>
 
 <main>
@@ -26,6 +26,8 @@
           </div>
           <div id="badge" class="badge hidden">GPU CUDA</div>
           <div id="micBadge" class="mic-badge hidden">🎤 Écoute…</div>
+          <div id="vlmBadge" class="vlm-badge hidden">🧠 VLM</div>
+          <div id="trackBadge" class="track-badge-ind hidden">📍 Track</div>
         </div>
         <div class="controls">
           <button id="btnStart" class="btn btn-primary">📷 Caméra</button>
@@ -38,10 +40,13 @@
           </div>
         </div>
         <div class="tool-bar">
-          <button id="btnVLM" class="btn btn-tool active" title="Vision Language Model — descriptions détaillées">🧠 VLM ON</button>
-          <button id="btnTrack" class="btn btn-tool active" title="Suivi d'objets entre frames">📍 Track ON</button>
-          <button id="btnFineTune" class="btn btn-tool" disabled title="Capturer un objet pour entraînement">📸 Fine-tune</button>
-          <button id="btnExport" class="btn btn-tool" disabled title="Exporter les détections en CSV">💾 Export CSV</button>
+          <button id="btnVLM" class="btn btn-tool active" title="VLM — descriptions détaillées">🧠 VLM</button>
+          <button id="btnTrack" class="btn btn-tool active" title="Tracking — suit les objets">📍 Track</button>
+          <button id="btnFineTune" class="btn btn-tool" disabled title="Capture pour entraînement">📸 Fine-tune</button>
+          <span class="tool-sep"></span>
+          <button id="btnExportSession" class="btn btn-export" disabled title="Export complet JSON">📋 Session JSON</button>
+          <button id="btnExportCSV" class="btn btn-export" disabled title="Export CSV détections">📊 CSV</button>
+          <button id="btnExportHTML" class="btn btn-export" disabled title="Rapport HTML">📄 Rapport HTML</button>
         </div>
         <div class="voice-panel" id="voicePanel">
           <div class="voice-status" id="voiceStatus">🎤 Appuyez sur Micro pour dicter une correction</div>
@@ -50,7 +55,6 @@
             <span>Exemples :</span>
             <code>"Ce n'est pas une chaise, c'est un tabouret"</code>
             <code>"La voiture est en fait un camion"</code>
-            <code>"C'est un téléphone portable, pas un remote"</code>
           </div>
         </div>
       </div>
@@ -63,17 +67,26 @@
           <ul id="correctionList"></ul>
           <button id="btnClearCorrections" class="btn btn-small btn-danger">🗑 Effacer</button>
         </div>
+        <div class="session-stats" id="sessionStats">
+          <h3>📊 Session</h3>
+          <div class="stats-grid">
+            <div class="stat-box"><span class="stat-label">Frames</span><span class="stat-val" id="statFrames">0</span></div>
+            <div class="stat-box"><span class="stat-label">Détections</span><span class="stat-val" id="statDetTotal">0</span></div>
+            <div class="stat-box"><span class="stat-label">VLM calls</span><span class="stat-val" id="statVLM">0</span></div>
+            <div class="stat-box"><span class="stat-label">Latence moy</span><span class="stat-val" id="statLatency">—</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="info">
-    <p><strong>YOLOv8m</strong> + <strong>ByteTrack</strong> + <strong>Florence-2 VLM</strong> — GPU <strong>RTX 4060 Ti</strong>. Tout est local, rien n'est envoyé sur internet.</p>
+    <p><strong>YOLOv8m</strong> + <strong>ByteTrack</strong> + <strong>BLIP VLM</strong> — Tout local, rien envoyé sur internet.</p>
   </section>
 </main>
 
 <footer>
-  <p><a href="https://github.com/aveca/A">aveca/A</a> — Full GPU Pipeline: Detection + Tracking + VLM + Fine-tuning</p>
+  <p><a href="https://github.com/aveca/A">aveca/A</a> — Full GPU Pipeline</p>
 </footer>
 
 <script src="/static/app.js"></script>

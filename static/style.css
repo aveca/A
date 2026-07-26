@@ -395,3 +395,93 @@ footer a { color: #58a6ff; text-decoration: none; }
   font-style: italic;
   margin-top: 0.2rem;
 }
+
+.vlm-badge {
+  position: absolute;
+  top: 10px; left: 50px;
+  background: #a371f7;
+  color: #fff;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  z-index: 5;
+}
+
+.vlm-badge.hidden { display: none; }
+
+.track-badge-ind {
+  position: absolute;
+  top: 10px; left: 100px;
+  background: #3fb950;
+  color: #fff;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  z-index: 5;
+}
+
+.track-badge-ind.hidden { display: none; }
+
+.tool-sep {
+  width: 1px;
+  background: #30363d;
+  margin: 0 0.3rem;
+}
+
+.btn-export {
+  background: #1f2937;
+  color: #8b949e;
+  border: 1px dashed #30363d;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-export:hover:not(:disabled) { background: #30363d; color: #c9d1d9; border-style: solid; }
+.btn-export:disabled { opacity: 0.3; cursor: not-allowed; }
+
+.session-stats {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #21262d;
+}
+
+.session-stats h3 {
+  font-size: 0.85rem;
+  color: #8b949e;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.stat-box {
+  background: #0d1117;
+  border: 1px solid #21262d;
+  border-radius: 6px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.7rem;
+  color: #484f58;
+  text-transform: uppercase;
+}
+
+.stat-val {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #58a6ff;
+  font-variant-numeric: tabular-nums;
+}
