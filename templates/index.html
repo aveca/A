@@ -10,7 +10,7 @@
 
 <header>
   <h1>🎯 Object Camera Recognition</h1>
-  <p>YOLOv8 + CUDA — Détection en temps réel sur ta RTX 4060 Ti</p>
+  <p>YOLOv8 + CUDA — Détection en temps réel + apprentissage vocal</p>
 </header>
 
 <main>
@@ -25,14 +25,26 @@
             <span id="loadingText">Chargement du modèle GPU…</span>
           </div>
           <div id="badge" class="badge hidden">GPU CUDA</div>
+          <div id="micBadge" class="mic-badge hidden">🎤 En écoute…</div>
         </div>
         <div class="controls">
           <button id="btnStart" class="btn btn-primary">📷 Démarrer la caméra</button>
           <button id="btnStop" class="btn btn-danger" disabled>⏹ Arrêter</button>
+          <button id="btnMic" class="btn btn-mic" disabled>🎤 Micro</button>
           <div class="stats">
             <span id="fpsCounter" class="stat">— FPS</span>
             <span id="detCount" class="stat">— objets</span>
             <span id="latency" class="stat">— ms</span>
+          </div>
+        </div>
+        <div class="voice-panel" id="voicePanel">
+          <div class="voice-status" id="voiceStatus">🎤 Appuyez sur Micro pour dicter une correction</div>
+          <div class="voice-transcript" id="voiceTranscript"></div>
+          <div class="voice-examples">
+            <span>Exemples :</span>
+            <code>"Ce n'est pas une chaise, c'est un tabouret"</code>
+            <code>"La voiture est en fait un camion"</code>
+            <code>"C'est un téléphone portable, pas un remote"</code>
           </div>
         </div>
       </div>
@@ -40,17 +52,22 @@
         <h3>Objets détectés <span id="totalBadge" class="total-badge">0</span></h3>
         <div id="sceneDesc" class="scene-desc"></div>
         <ul id="objectList"></ul>
+        <div class="corrections-section">
+          <h3>📝 Corrections enregistrées <span id="corrCount" class="total-badge">0</span></h3>
+          <ul id="correctionList"></ul>
+          <button id="btnClearCorrections" class="btn btn-small btn-danger">🗑 Effacer tout</button>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="info">
-    <p>La détection utilise <strong>YOLOv8m</strong> avec <strong>CUDA</strong> sur ta <strong>RTX 4060 Ti</strong>. Les images sont traitées localement — rien n'est envoyé sur internet.</p>
+    <p>La détection utilise <strong>YOLOv8m</strong> + <strong>CUDA</strong> sur ta <strong>RTX 4060 Ti</strong>. Dictes des corrections vocales pour améliorer la reconnaissance : l'IA se souvient de tes ajouts.</p>
   </section>
 </main>
 
 <footer>
-  <p><a href="https://github.com/aveca/A">aveca/A</a> — GPU Object Detection</p>
+  <p><a href="https://github.com/aveca/A">aveca/A</a> — GPU Object Detection + Voice Learning</p>
 </footer>
 
 <script src="/static/app.js"></script>
