@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Camera Recognition — GPU</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header>
+  <h1>🎯 Object Camera Recognition</h1>
+  <p>YOLOv8 + CUDA — Détection en temps réel sur ta RTX 4060 Ti</p>
+</header>
+
+<main>
+  <section class="demo">
+    <div class="demo-grid">
+      <div class="video-panel">
+        <div class="video-wrapper">
+          <video id="video" autoplay muted playsinline></video>
+          <canvas id="canvas"></canvas>
+          <div id="loading">
+            <div class="spinner"></div>
+            <span id="loadingText">Chargement du modèle GPU…</span>
+          </div>
+          <div id="badge" class="badge hidden">GPU CUDA</div>
+        </div>
+        <div class="controls">
+          <button id="btnStart" class="btn btn-primary">📷 Démarrer la caméra</button>
+          <button id="btnStop" class="btn btn-danger" disabled>⏹ Arrêter</button>
+          <div class="stats">
+            <span id="fpsCounter" class="stat">— FPS</span>
+            <span id="detCount" class="stat">— objets</span>
+            <span id="latency" class="stat">— ms</span>
+          </div>
+        </div>
+      </div>
+      <div class="results-panel">
+        <h3>Objets détectés <span id="totalBadge" class="total-badge">0</span></h3>
+        <div id="sceneDesc" class="scene-desc"></div>
+        <ul id="objectList"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="info">
+    <p>La détection utilise <strong>YOLOv8m</strong> avec <strong>CUDA</strong> sur ta <strong>RTX 4060 Ti</strong>. Les images sont traitées localement — rien n'est envoyé sur internet.</p>
+  </section>
+</main>
+
+<footer>
+  <p><a href="https://github.com/aveca/A">aveca/A</a> — GPU Object Detection</p>
+</footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

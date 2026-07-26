@@ -1,0 +1,9 @@
+Chargement du modèle YOLOv8m sur GPU...
+Modèle chargé. Device: cpu
+==================================================
+  Object Camera Recognition — GPU Server
+  YOLOv8m + CUDA — RTX 4060 Ti
+  http://localhost:5000
+==================================================
+ * Serving Flask app 'app'
+ * Debug mode: off
