@@ -9,19 +9,19 @@ body {
 
 header {
   text-align: center;
-  padding: 4rem 2rem 2rem;
+  padding: 3rem 2rem 2rem;
   background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
   border-bottom: 1px solid #30363d;
 }
 
 header h1 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   color: #58a6ff;
   margin-bottom: 0.5rem;
 }
 
 header p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: #8b949e;
 }
 
@@ -31,18 +31,162 @@ main {
   padding: 2rem;
 }
 
+.demo {
+  margin-bottom: 2rem;
+}
+
+.demo-container {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.video-wrapper video,
+.video-wrapper canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#loading {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.8);
+  color: #58a6ff;
+  font-size: 1.1rem;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #30363d;
+  border-top-color: #58a6ff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.btn-primary { background: #238636; color: #fff; }
+.btn-primary:hover:not(:disabled) { background: #2ea043; }
+.btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+.btn-secondary:hover:not(:disabled) { background: #30363d; }
+
+.fps {
+  margin-left: auto;
+  color: #8b949e;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.results {
+  background: #0d1117;
+  border: 1px solid #21262d;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.results h3 {
+  font-size: 0.95rem;
+  color: #8b949e;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+#objectList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#objectList li {
+  background: #1f2937;
+  color: #58a6ff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: 1px solid #30363d;
+}
+
+#objectList li .conf {
+  color: #8b949e;
+  margin-left: 0.3rem;
+}
+
+.info {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #21262d;
+  margin: 2rem 0;
+}
+
 .intro {
   text-align: center;
-  margin-bottom: 3rem;
-  font-size: 1.05rem;
-  color: #b1bac4;
+  margin-bottom: 2rem;
+}
+
+.intro h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro p {
+  color: #8b949e;
+  font-size: 0.95rem;
 }
 
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .card {
@@ -85,9 +229,7 @@ main {
   text-decoration: none;
 }
 
-.card h2 a:hover {
-  text-decoration: underline;
-}
+.card h2 a:hover { text-decoration: underline; }
 
 .card p {
   font-size: 0.92rem;
@@ -108,42 +250,6 @@ main {
   padding: 0.2rem 0.6rem;
   border-radius: 999px;
   border: 1px solid #30363d;
-}
-
-.comparison {
-  margin-bottom: 3rem;
-}
-
-.comparison h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #c9d1d9;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  text-align: left;
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid #21262d;
-}
-
-th {
-  color: #8b949e;
-  font-weight: 600;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-}
-
-td {
-  font-size: 0.92rem;
-}
-
-tr:hover td {
-  background: #161b22;
 }
 
 footer {

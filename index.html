@@ -1,122 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Object Camera Recognition — Best Open-Source Projects</title>
+  <title>Object Camera Recognition — Détection en direct</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd@latest"></script>
 </head>
 <body>
 
 <header>
   <h1>Object Camera Recognition</h1>
-  <p>Curated list of the best open-source projects for real-time object detection with cameras</p>
+  <p>Pointez votre caméra — l'IA reconnaît les objets en temps réel</p>
 </header>
 
 <main>
 
-  <section class="intro">
+  <section class="demo">
+    <div class="demo-container">
+      <div class="video-wrapper">
+        <video id="video" autoplay muted playsinline></video>
+        <canvas id="canvas"></canvas>
+        <div id="loading">
+          <div class="spinner"></div>
+          Chargement du modèle IA…
+        </div>
+      </div>
+      <div class="controls">
+        <button id="btnStart" class="btn btn-primary">📷 Démarrer la caméra</button>
+        <button id="btnStop" class="btn btn-secondary" disabled>⏹ Arrêter</button>
+        <span id="fpsCounter" class="fps">—</span>
+      </div>
+      <div id="results" class="results">
+        <h3>Objets détectés</h3>
+        <ul id="objectList"><li>Aucun objet pour l'instant</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="info">
     <p>
-      From IP camera NVRs to YOLO models running on edge devices — here are the top GitHub repositories
-      for <strong>object camera recognition</strong>, ranked by community adoption and technical excellence.
+      La détection se fait <strong>100% dans votre navigateur</strong> grâce à TensorFlow.js
+      et au modèle COCO-SSD (80 classes d'objets). Aucune image n'est envoyée sur un serveur.
     </p>
   </section>
 
-  <section class="cards">
+  <hr>
 
+  <section class="intro">
+    <h2>Projets open-source recommandés</h2>
+    <p>Les meilleures solutions pour aller plus loin avec la reconnaissance d'objets par caméra.</p>
+  </section>
+
+  <section class="cards">
     <article class="card">
       <div class="rank">#1</div>
       <div class="stars">⭐ 57.7k</div>
       <h2><a href="https://github.com/ultralytics/yolov5" target="_blank">ultralytics / yolov5</a></h2>
-      <p>YOLOv5 — the most popular object detection model. PyTorch-based, fast, accurate, production-ready. Supports ONNX, CoreML, TFLite export.</p>
+      <p>YOLOv5 — modèle de détection le plus populaire. PyTorch, rapide, précis, prêt pour la production.</p>
       <div class="tags"><span>Python</span><span>PyTorch</span><span>ONNX</span></div>
     </article>
-
     <article class="card">
       <div class="rank">#2</div>
       <div class="stars">⭐ 34.4k</div>
       <h2><a href="https://github.com/blakeblackshear/frigate" target="_blank">blakeblackshear / frigate</a></h2>
-      <p>Complete NVR with real-time local object detection for IP cameras. Integrates with Home Assistant. Uses TensorFlow + OpenCV.</p>
+      <p>NVR complet avec détection temps réel pour caméras IP. Intégration Home Assistant.</p>
       <div class="tags"><span>NVR</span><span>Home Assistant</span><span>MQTT</span></div>
     </article>
-
     <article class="card">
       <div class="rank">#3</div>
       <div class="stars">⭐ 11.3k</div>
       <h2><a href="https://github.com/THU-MIG/yolov10" target="_blank">THU-MIG / yolov10</a></h2>
-      <p>Real-Time End-to-End Object Detection (NeurIPS 2024). NMS-free training, state-of-the-art latency-accuracy trade-off.</p>
+      <p>Détection temps réel end-to-end (NeurIPS 2024). Sans NMS, meilleur rapport latence/précision.</p>
       <div class="tags"><span>Python</span><span>NeurIPS</span><span>End-to-End</span></div>
     </article>
-
     <article class="card">
       <div class="rank">#4</div>
       <div class="stars">⭐ ~9k</div>
       <h2><a href="https://github.com/OlafenwaMoses/ImageAI" target="_blank">OlafenwaMoses / ImageAI</a></h2>
-      <p>Python library for easy computer vision — object detection on images, videos, and camera streams with RetinaNet, YOLOv3, TinyYOLO.</p>
+      <p>Librairie Python CV facile — détection sur images, vidéos et flux caméra.</p>
       <div class="tags"><span>Python</span><span>Video</span><span>Camera</span></div>
     </article>
-
     <article class="card">
       <div class="rank">#5</div>
       <div class="stars">⭐ 6.4k</div>
       <h2><a href="https://github.com/AILab-CVC/YOLO-World" target="_blank">AILab-CVC / YOLO-World</a></h2>
-      <p>Real-Time Open-Vocabulary Object Detection (CVPR 2024). Prompt-then-detect — detect anything without retraining.</p>
+      <p>Détection open-vocabulary temps réel (CVPR 2024). Détectez n'importe quoi sans réentraînement.</p>
       <div class="tags"><span>Python</span><span>CVPR 2024</span><span>Open-Vocab</span></div>
     </article>
-
     <article class="card">
       <div class="rank">#6</div>
       <div class="stars">⭐ ~3k</div>
       <h2><a href="https://github.com/SharpAI/DeepCamera" target="_blank">SharpAI / DeepCamera</a></h2>
-      <p>Open-Source AI Camera Platform. NVR + VLM (Qwen, DeepSeek, LLaVA) + YOLO. Pluggable AI skills. Runs on Mac Mini & AI PC.</p>
+      <p>Plateforme IA caméra open-source. NVR + VLM (Qwen, DeepSeek) + YOLO. Skills pluggables.</p>
       <div class="tags"><span>Python</span><span>VLM</span><span>NVR</span></div>
     </article>
-
-    <article class="card">
-      <div class="rank">#7</div>
-      <div class="stars">⭐ New</div>
-      <h2><a href="https://github.com/THU-MIG/yoloe" target="_blank">THU-MIG / yoloe</a></h2>
-      <p>YOLOE: Real-Time Seeing Anything (ICCV 2025). Unified detection & segmentation with text, visual, or prompt-free modes.</p>
-      <div class="tags"><span>Python</span><span>ICCV 2025</span><span>Unified</span></div>
-    </article>
-
-    <article class="card">
-      <div class="rank">#8</div>
-      <div class="stars">⭐ New</div>
-      <h2><a href="https://github.com/WeChatCV/WeDetect" target="_blank">WeChatCV / WeDetect</a></h2>
-      <p>Fast Open-Vocabulary Object Detection as Retrieval (CVPR 2026). Real-time, dual-tower architecture.</p>
-      <div class="tags"><span>Python</span><span>CVPR 2026</span><span>Retrieval</span></div>
-    </article>
-
-  </section>
-
-  <section class="comparison">
-    <h2>Quick comparison</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Project</th>
-          <th>Best for</th>
-          <th>Hardware</th>
-          <th>Language</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>YOLOv5</td><td>Custom model training</td><td>GPU / CPU</td><td>Python</td></tr>
-        <tr><td>Frigate</td><td>IP camera NVR system</td><td>GPU / TPU</td><td>Python + TS</td></tr>
-        <tr><td>YOLOv10</td><td>Production deployment</td><td>GPU</td><td>Python</td></tr>
-        <tr><td>DeepCamera</td><td>AI camera with VLM skills</td><td>Mac / PC + GPU</td><td>Python</td></tr>
-        <tr><td>ImageAI</td><td>Quick prototyping</td><td>CPU / GPU</td><td>Python</td></tr>
-        <tr><td>YOLO-World</td><td>Zero-shot detection</td><td>GPU</td><td>Python</td></tr>
-      </tbody>
-    </table>
   </section>
 
 </main>
 
 <footer>
-  <p>Built for <a href="https://github.com/aveca/A" target="_blank">aveca/A</a> — Object Camera Recognition Showcase</p>
+  <p><a href="https://github.com/aveca/A" target="_blank">aveca/A</a> — Live Object Detection with TensorFlow.js</p>
 </footer>
 
+<script src="app.js"></script>
 </body>
 </html>
