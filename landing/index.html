@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f172a">
+    <title>Vision Agent — Vision par ordinateur locale & intelligente</title>
+    <meta name="description" content="Vision Agent détecte objets, visages, textes et codes-barres en temps réel, 100% local.">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #e2e8f0; background: #0f172a; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        header { padding: 80px 0 60px; text-align: center; }
+        header h1 { font-size: 3rem; margin-bottom: 16px; background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        header p { font-size: 1.25rem; color: #94a3b8; max-width: 600px; margin: 0 auto 32px; }
+        .cta { display: inline-block; padding: 14px 32px; background: linear-gradient(90deg, #38bdf8, #818cf8); color: #0f172a; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem; }
+        .cta:hover { opacity: 0.9; }
+        .badge { display: inline-block; padding: 6px 14px; background: rgba(56, 189, 248, 0.1); color: #38bdf8; border-radius: 20px; font-size: 0.85rem; margin-bottom: 24px; }
+        section { padding: 60px 0; }
+        h2 { font-size: 2rem; margin-bottom: 32px; text-align: center; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+        .feature { background: #1e293b; padding: 28px; border-radius: 12px; border: 1px solid #334155; }
+        .feature h3 { color: #38bdf8; margin-bottom: 12px; font-size: 1.1rem; }
+        .feature p { color: #94a3b8; }
+        .pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+        .plan { background: #1e293b; padding: 32px; border-radius: 12px; border: 1px solid #334155; text-align: center; }
+        .plan.popular { border-color: #38bdf8; transform: scale(1.02); }
+        .plan h3 { font-size: 1.3rem; margin-bottom: 8px; }
+        .plan .price { font-size: 2.5rem; font-weight: 700; color: #f8fafc; margin: 16px 0; }
+        .plan ul { list-style: none; text-align: left; color: #94a3b8; margin: 24px 0; }
+        .plan li { padding: 8px 0; border-bottom: 1px solid #334155; }
+        .plan li:last-child { border-bottom: none; }
+        footer { text-align: center; padding: 40px 0; color: #64748b; border-top: 1px solid #1e293b; }
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            header p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="badge">100 % local • Aucun cloud • GPU/CPU</div>
+            <h1>Vision Agent</h1>
+            <p>Un seul bouton pour détecter objets, visages, textes et codes-barres en temps réel. L'IA de vision qui apprend chez vous.</p>
+            <a href="#download" class="cta">Télécharger pour Windows</a>
+        </div>
+    </header>
+
+    <section id="features">
+        <div class="container">
+            <h2>Ce que fait Vision Agent</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>🔍 Détection d'objets</h3>
+                    <p>YOLOv8 en temps réel. Bouteilles, téléphones, personnes, produits... Et vos propres classes personnalisées.</p>
+                </div>
+                <div class="feature">
+                    <h3>📝 OCR intelligent</h3>
+                    <p>Lit le texte en français et anglais sur les emballages, étiquettes, tickets, prix.</p>
+                </div>
+                <div class="feature">
+                    <h3>📱 Codes-barres & QR</h3>
+                    <p>Scanne EAN, UPC, QR codes et enrichit automatiquement votre base de produits.</p>
+                </div>
+                <div class="feature">
+                    <h3>😊 Visage & gestes</h3>
+                    <p>Reconnaissance faciale, détection de gestes et analyse de présence avec MediaPipe.</p>
+                </div>
+                <div class="feature">
+                    <h3>📹 Enregistrement auto</h3>
+                    <p>Sauvegarde l'écran, la webcam et les détections. Sessions JSON exportables.</p>
+                </div>
+                <div class="feature">
+                    <h3>🧠 Auto-apprentissage</h3>
+                    <p>Collecte les images, entraîne le modèle et s'améliore avec le temps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="usecases" style="background:#1e293b;">
+        <div class="container">
+            <h2>Pour quels métiers ?</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>Retail & Caisse</h3>
+                    <p>Caisse automatique, inventaire de rayon, contrôle des prix, reconnaissance de marques.</p>
+                </div>
+                <div class="feature">
+                    <h3>Industrie & Qualité</h3>
+                    <p>Contrôle qualité, comptage de pièces, traçabilité par lot et date de péremption.</p>
+                </div>
+                <div class="feature">
+                    <h3>Sécurité & Accès</h3>
+                    <p>Détection d'intrusion, comptage de passage, surveillance de zone, analyse de flux.</p>
+                </div>
+                <div class="feature">
+                    <h3>Logistique</h3>
+                    <p>Scan de colis, reconnaissance d'articles, suivi d'inventaire.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <div class="container">
+            <h2>Tarification</h2>
+            <div class="pricing">
+                <div class="plan">
+                    <h3>Starter</h3>
+                    <div class="price">Gratuit</div>
+                    <ul>
+                        <li>1 caméra</li>
+                        <li>Détection YOLO + OCR</li>
+                        <li>Base produits locale</li>
+                        <li>Export JSON</li>
+                    </ul>
+                    <a href="#download" class="cta">Télécharger</a>
+                </div>
+                <div class="plan popular">
+                    <h3>Pro</h3>
+                    <div class="price">49€/mo</div>
+                    <ul>
+                        <li>Caméras illimitées</li>
+                        <li>Enregistrement cloud</li>
+                        <li>Rapports automatiques</li>
+                        <li>Support par email</li>
+                    </ul>
+                    <a href="#contact" class="cta">Acheter</a>
+                </div>
+                <div class="plan">
+                    <h3>Enterprise</h3>
+                    <div class="price">Sur devis</div>
+                    <ul>
+                        <li>Déploiement multi-site</li>
+                        <li>API REST dédiée</li>
+                        <li>Support dédié</li>
+                        <li>Personnalisation</li>
+                    </ul>
+                    <a href="#contact" class="cta">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" style="text-align:center;">
+        <div class="container">
+            <h2>Prêt à commencer ?</h2>
+            <p style="color:#94a3b8; margin-bottom:24px;">Télécharge Vision Agent pour Windows. Installation en 1 clic.</p>
+            <a href="VisionAgent_Setup.exe" class="cta" download>Télécharger VisionAgent_Setup.exe</a>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <p>© 2026 Vision Agent. Contact : contact@visionagent.app</p>
+        </div>
+    </footer>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>

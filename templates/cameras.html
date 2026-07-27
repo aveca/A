@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caméras — Surveillance intelligente</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/cameras.css">
+</head>
+<body>
+
+<header>
+  <h1>Surveillance Multi-Caméras</h1>
+  <p>Analyse continue : objets, scènes, situations, gestes, visages</p>
+</header>
+
+<main>
+  <section class="camera-form">
+    <h2>Ajouter une caméra</h2>
+    <div class="form-grid">
+      <input type="text" id="camName" placeholder="Nom (ex: salon, entree)" class="input">
+      <input type="text" id="camSource" placeholder="Source (0, rtsp://..., http://...)" class="input">
+      <label class="check"><input type="checkbox" id="camYOLO" checked> YOLO</label>
+      <label class="check"><input type="checkbox" id="camOCR" checked> OCR</label>
+      <label class="check"><input type="checkbox" id="camVLM"> VLM</label>
+      <label class="check"><input type="checkbox" id="camGesture"> Mains</label>
+      <label class="check"><input type="checkbox" id="camFace"> Visage</label>
+      <button id="btnAddCam" class="btn btn-primary">Ajouter</button>
+      <button id="btnStopAll" class="btn btn-danger">Arrêter tout</button>
+    </div>
+  </section>
+
+  <section class="camera-grid" id="cameraGrid">
+    <!-- Les caméras s'affichent ici -->
+  </section>
+
+  <section class="events-panel">
+    <h2>Événements</h2>
+    <button id="btnClearEvents" class="btn btn-small">Vider</button>
+    <ul id="eventsList"><li class="empty-text">Aucun événement</li></ul>
+  </section>
+</main>
+
+<footer>
+  <p><a href="/">Retour à la détection en direct</a></p>
+</footer>
+
+<script src="/static/cameras.js"></script>
+</body>
+</html>

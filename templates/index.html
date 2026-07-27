@@ -3,92 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Object Camera Recognition — Full Pipeline GPU</title>
-  <link rel="stylesheet" href="/static/style.css">
+  <title>Vision Agent</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; background:#0a0a0a; color:#eee; }
+    .container { max-width:800px; margin:0 auto; padding:16px; display:flex; flex-direction:column; min-height:100dvh; gap:12px; }
+    h1 { font-size:1.1rem; color:#38bdf8; text-align:center; padding:6px 0; }
+    .cam-wrap { position:relative; background:#1a1a1a; border-radius:16px; overflow:hidden; aspect-ratio:4/3; }
+    #video { width:100%; height:100%; object-fit:cover; }
+    #canvas { position:absolute; top:0; left:0; width:100%; height:100%; z-index:2; }
+    #loading { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:#888; font-size:0.9rem; text-align:center; z-index:1; }
+    .coach { background:#1a1a1a; border-radius:16px; padding:16px; }
+    .activity { text-align:center; }
+    .activity .label { font-size:0.7rem; color:#888; text-transform:uppercase; letter-spacing:0.5px; }
+    .activity .val { font-size:1.3rem; color:#38bdf8; font-weight:600; margin-top:4px; }
+    .suggestion { background:#0f172a; border-radius:12px; padding:14px; margin-top:12px; border-left:3px solid #818cf8; }
+    .suggestion .label { font-size:0.7rem; color:#888; text-transform:uppercase; letter-spacing:0.5px; }
+    .suggestion .val { font-size:1rem; color:#e2e8f0; margin-top:6px; line-height:1.5; }
+    .timer { font-size:0.8rem; color:#666; text-align:center; margin-top:8px; }
+    .detections { display:flex; flex-wrap:wrap; gap:6px; justify-content:center; margin-top:8px; min-height:24px; }
+    .detections .tag { background:#1e293b; color:#94a3b8; padding:3px 10px; border-radius:12px; font-size:0.75rem; }
+    .detections .tag .conf { color:#38bdf8; }
+    .btn { margin:12px auto 0; padding:12px 32px; border:none; border-radius:40px; font-size:1rem; font-weight:600; cursor:pointer; background:linear-gradient(135deg,#38bdf8,#818cf8); color:#fff; display:block; }
+    .btn:active { transform:scale(0.97); }
+  </style>
 </head>
 <body>
-
-<header>
-  <h1>🎯 Object Camera Recognition</h1>
-  <p>YOLOv8 + ByteTrack + BLIP VLM — Pipeline complet sur RTX 4060 Ti</p>
-</header>
-
-<main>
-  <section class="demo">
-    <div class="demo-grid">
-      <div class="video-panel">
-        <div class="video-wrapper">
-          <video id="video" autoplay muted playsinline></video>
-          <canvas id="canvas"></canvas>
-          <div id="loading">
-            <div class="spinner"></div>
-            <span id="loadingText">Chargement du pipeline GPU…</span>
-          </div>
-          <div id="badge" class="badge hidden">GPU CUDA</div>
-          <div id="micBadge" class="mic-badge hidden">🎤 Écoute…</div>
-          <div id="vlmBadge" class="vlm-badge hidden">🧠 VLM</div>
-          <div id="trackBadge" class="track-badge-ind hidden">📍 Track</div>
-        </div>
-        <div class="controls">
-          <button id="btnStart" class="btn btn-primary">📷 Caméra</button>
-          <button id="btnStop" class="btn btn-danger" disabled>⏹ Stop</button>
-          <button id="btnMic" class="btn btn-mic" disabled>🎤 Micro</button>
-          <div class="stats">
-            <span id="fpsCounter" class="stat">— FPS</span>
-            <span id="detCount" class="stat">— objets</span>
-            <span id="latency" class="stat">— ms</span>
-          </div>
-        </div>
-        <div class="tool-bar">
-          <button id="btnVLM" class="btn btn-tool active" title="VLM — descriptions détaillées">🧠 VLM</button>
-          <button id="btnTrack" class="btn btn-tool active" title="Tracking — suit les objets">📍 Track</button>
-          <button id="btnFineTune" class="btn btn-tool" disabled title="Capture pour entraînement">📸 Fine-tune</button>
-          <span class="tool-sep"></span>
-          <button id="btnExportSession" class="btn btn-export" disabled title="Export complet JSON">📋 Session JSON</button>
-          <button id="btnExportCSV" class="btn btn-export" disabled title="Export CSV détections">📊 CSV</button>
-          <button id="btnExportHTML" class="btn btn-export" disabled title="Rapport HTML">📄 Rapport HTML</button>
-        </div>
-        <div class="voice-panel" id="voicePanel">
-          <div class="voice-status" id="voiceStatus">🎤 Appuyez sur Micro pour dicter une correction</div>
-          <div class="voice-transcript" id="voiceTranscript"></div>
-          <div class="voice-examples">
-            <span>Exemples :</span>
-            <code>"Ce n'est pas une chaise, c'est un tabouret"</code>
-            <code>"La voiture est en fait un camion"</code>
-          </div>
-        </div>
-      </div>
-      <div class="results-panel">
-        <h3>Objets détectés <span id="totalBadge" class="total-badge">0</span></h3>
-        <div id="sceneDesc" class="scene-desc"></div>
-        <ul id="objectList"></ul>
-        <div class="corrections-section">
-          <h3>📝 Corrections <span id="corrCount" class="total-badge">0</span></h3>
-          <ul id="correctionList"></ul>
-          <button id="btnClearCorrections" class="btn btn-small btn-danger">🗑 Effacer</button>
-        </div>
-        <div class="session-stats" id="sessionStats">
-          <h3>📊 Session</h3>
-          <div class="stats-grid">
-            <div class="stat-box"><span class="stat-label">Frames</span><span class="stat-val" id="statFrames">0</span></div>
-            <div class="stat-box"><span class="stat-label">Détections</span><span class="stat-val" id="statDetTotal">0</span></div>
-            <div class="stat-box"><span class="stat-label">VLM calls</span><span class="stat-val" id="statVLM">0</span></div>
-            <div class="stat-box"><span class="stat-label">Latence moy</span><span class="stat-val" id="statLatency">—</span></div>
-          </div>
-        </div>
-      </div>
+<div class="container">
+  <h1>Vision Agent</h1>
+  <div class="cam-wrap">
+    <video id="video" autoplay muted playsinline></video>
+    <canvas id="canvas"></canvas>
+    <div id="loading">Clique "Démarrer" pour activer la caméra</div>
+  </div>
+  <div class="coach">
+    <div class="activity">
+      <div class="label">Activité</div>
+      <div class="val" id="activityText">Analyse...</div>
     </div>
-  </section>
+    <div class="suggestion">
+      <div class="label">Conseil</div>
+      <div class="val" id="suggestionText">Rien pour l'instant</div>
+    </div>
+    <div class="timer" id="timer">--:--</div>
+    <button class="btn" id="btnStart">Activer ma webcam</button>
+  </div>
+  <div class="detections" id="detectionTags"></div>
+</div>
 
-  <section class="info">
-    <p><strong>YOLOv8m</strong> + <strong>ByteTrack</strong> + <strong>BLIP VLM</strong> — Tout local, rien envoyé sur internet.</p>
-  </section>
-</main>
+<script>
+const video = document.getElementById('video');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const activityEl = document.getElementById('activityText');
+const suggestionEl = document.getElementById('suggestionText');
+const timerEl = document.getElementById('timer');
+const loadingEl = document.getElementById('loading');
+const tagsEl = document.getElementById('detectionTags');
+const btnStart = document.getElementById('btnStart');
 
-<footer>
-  <p><a href="https://github.com/aveca/A">aveca/A</a> — Full GPU Pipeline</p>
-</footer>
+let running = false, stream = null, animId = null;
+let startTime = Date.now();
 
-<script src="/static/app.js"></script>
+btnStart.onclick = async () => {
+  if (running) {
+    if (stream) stream.getTracks().forEach(t => t.stop());
+    if (animId) cancelAnimationFrame(animId);
+    running = false;
+    btnStart.textContent = 'Activer ma webcam';
+    loadingEl.textContent = 'Arrêté';
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    return;
+  }
+  try {
+    loadingEl.textContent = 'Demande d\'accès caméra...';
+    stream = await navigator.mediaDevices.getUserMedia({ video:true, audio:false });
+    video.srcObject = stream;
+    await video.play();
+    canvas.width = video.videoWidth || 640;
+    canvas.height = video.videoHeight || 480;
+    loadingEl.textContent = '';
+    running = true;
+    startTime = Date.now();
+    btnStart.textContent = 'Arrêter';
+    btnStart.style.background = 'linear-gradient(135deg,#ef4444,#f97316)';
+    setInterval(refreshCoach, 3000);
+    detectLoop();
+  } catch(e) {
+    loadingEl.textContent = 'Caméra refusée. Vérifie les permissions.';
+  }
+};
+
+function detectLoop() {
+  if (!running) return;
+  ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+  canvas.toBlob(async blob => {
+    const form = new FormData();
+    form.append('image', blob, 'f.jpg');
+    try {
+      const r = await fetch('/detect', { method:'POST', body:form });
+      const d = await r.json();
+      tagsEl.innerHTML = (d.detections||[]).slice(0,12).map(o =>
+        `<span class="tag">${o.class||o.label||'?'} <span class="conf">${Math.round((o.confidence||o.conf||0)*100)}%</span></span>`
+      ).join('');
+    } catch(e) {}
+    requestAnimationFrame(detectLoop);
+  }, 'image/jpeg', 0.7);
+}
+
+async function refreshCoach() {
+  if (!running) return;
+  try {
+    const r = await fetch('/coach?_=' + Date.now());
+    const d = await r.json();
+    activityEl.textContent = d.activity || 'Analyse...';
+    suggestionEl.textContent = d.suggestion || '';
+  } catch(e) {}
+}
+
+setInterval(() => {
+  const e = Math.floor((Date.now() - startTime) / 1000);
+  if (e > 0) timerEl.textContent = String(Math.floor(e/60)).padStart(2,'0') + ':' + String(e%60).padStart(2,'0');
+}, 1000);
+</script>
 </body>
 </html>

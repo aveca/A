@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+*.spec
+
+# Généré
+dist/
+build/
+logs/
+dataset/
+events/
+sessions/
+reports/
+products_db.json
+license.json
+favicon.ico
+
+# Modèles lourds
+models/*.pt
+models/qwen2-vl-*
+models/*.safetensors
+*.pt
+
+# Installateur
+VisionAgent_Setup.exe
+
+# IDE
+.vscode/
+.idea/
+
+# Sous-dossier git
+h/
+VisionAgent/h/
+h
+
